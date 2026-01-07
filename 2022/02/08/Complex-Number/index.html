@@ -1,0 +1,974 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#9370db"><meta name="generator" content="Hexo 8.1.1">
+<link rel="preconnect" href="https://fonts.googleapis.cn" crossorigin>
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon.ico">
+  <link rel="mask-icon" href="/images/favicon.svg" color="#9370db">
+  <link rel="manifest" href="/images/site.webmanifest">
+  <meta name="google-site-verification" content="I50azh-xtEyVuAVrVZHKk8hEXtVX9qeIIFuYWd9DYQM">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.googleapis.cn/css2?family=Fira+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Noto+Serif+SC:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Fira+Code:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.0.0/css/all.min.css" integrity="sha256-VHqXKFhhMxcpubYf9xiWdCiojEbY9NexQ4jh8AxbvcM=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/themes/purple/pace-theme-minimal.css">
+  <script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous" defer></script>
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"luckyfuy.top","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.26.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"base16/one-light","dark":"base16/onedark"},"prism":{"light":"prism","dark":"prism-dark"},"copy_button":{"enable":true,"style":"flat"},"fold":{"enable":false,"height":500},"language":false},"bookmark":{"enable":false,"color":"#222","save":"manual"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"top_n_per_article":1,"unescape":true,"preload":true}}</script><script src="/js/config.js" defer></script>
+
+    <meta name="description" content="复数 为了解决\(x^{2} + 1 &#x3D; 0\)这样的方程在实数系中无解的问题，我们引入一个新数\(\mathrm{i}\)，使得\(x &#x3D; \mathrm{i}\)是方程的解，即满足\(\mathrm{i}^{2} &#x3D; -1\)。 这样，我们就能扩充数系，新数系中的所有数都可以表示为 \[z &#x3D; a + b \mathrm{i} (a, b \in \mathbb{R})\] 形如这种">
+<meta property="og:type" content="article">
+<meta property="og:title" content="学习笔记·复数">
+<meta property="og:url" content="https://luckyfuy.top/2022/02/08/Complex-Number/">
+<meta property="og:site_name" content="Luckyfuy&#39;s Blog">
+<meta property="og:description" content="复数 为了解决\(x^{2} + 1 &#x3D; 0\)这样的方程在实数系中无解的问题，我们引入一个新数\(\mathrm{i}\)，使得\(x &#x3D; \mathrm{i}\)是方程的解，即满足\(\mathrm{i}^{2} &#x3D; -1\)。 这样，我们就能扩充数系，新数系中的所有数都可以表示为 \[z &#x3D; a + b \mathrm{i} (a, b \in \mathbb{R})\] 形如这种">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://s2.loli.net/2022/02/08/YTkVNrmdiJyFWU4.png">
+<meta property="og:image" content="https://s2.loli.net/2022/02/08/oyGX57csfgMYVQO.png">
+<meta property="article:published_time" content="2022-02-08T09:23:43.000Z">
+<meta property="article:modified_time" content="2026-01-05T22:24:13.881Z">
+<meta property="article:author" content="Luckyfuy">
+<meta property="article:tag" content="Mathematics">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://s2.loli.net/2022/02/08/YTkVNrmdiJyFWU4.png">
+
+
+<link rel="canonical" href="https://luckyfuy.top/2022/02/08/Complex-Number/">
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://luckyfuy.top/2022/02/08/Complex-Number/","path":"2022/02/08/Complex-Number/","title":"学习笔记·复数"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>学习笔记·复数 | Luckyfuy's Blog</title>
+  
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-KZ6R08BNYM"></script>
+  <script class="next-config" data-name="google_analytics" type="application/json">{"tracking_id":"G-KZ6R08BNYM","only_pageview":false,"measure_protocol_api_secret":null}</script>
+  <script src="/js/third-party/analytics/google-analytics.js" defer></script>
+
+
+
+
+
+
+
+
+  
+  <script size="300" alpha="0.6" zIndex="-1" src="https://cdn.jsdelivr.net/npm/ribbon.js@1.0.2/dist/ribbon.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous" defer></script>
+<script src="/js/utils.js" defer></script><script src="/js/motion.js" defer></script><script src="/js/sidebar.js" defer></script><script src="/js/next-boot.js" defer></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/hexo-generator-searchdb@1.5.0/dist/search.js" integrity="sha256-xFC6PJ82SL9b3WkGjFavNiA9gm5z6UBxWPiu4CYjptg=" crossorigin="anonymous" defer></script>
+<script src="/js/third-party/search/local-search.js" defer></script>
+
+
+
+
+
+  <script src="/js/third-party/pace.js" defer></script>
+
+  <script src="/js/third-party/addtoany.js" defer></script>
+
+  
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">true</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
+<script src="/js/third-party/math/mathjax.js" defer></script>
+
+
+
+    <link rel="stylesheet" href="https://fonts.googleapis.cn/css2?family=Noto+Serif+JP:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap&subset=latin,latin-ext">
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">Luckyfuy's Blog</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li><li class="menu-item menu-item-lab"><a href="/lab/" rel="section"><i class="fa fa-flask fa-fw"></i>实验室</a></li><li class="menu-item menu-item-resource"><a href="/resource/" rel="section"><i class="fa fa-file fa-fw"></i>资源</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+      <div class="search-header">
+        <span class="search-icon">
+          <i class="fa fa-search"></i>
+        </span>
+        <div class="search-input-container">
+          <input autocomplete="off" autocapitalize="off" maxlength="80"
+                placeholder="搜索..." spellcheck="false"
+                type="search" class="search-input">
+        </div>
+        <span class="popup-btn-close" role="button">
+          <i class="fa fa-times-circle"></i>
+        </span>
+      </div>
+      <div class="search-result-container">
+        <div class="search-result-icon">
+          <i class="fa fa-spinner fa-pulse fa-5x"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%A4%8D%E6%95%B0"><span class="nav-number">1.</span> <span class="nav-text">复数</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A4%8D%E6%95%B0%E7%9A%84%E5%87%A0%E4%BD%95%E6%84%8F%E4%B9%89"><span class="nav-number">1.1.</span> <span class="nav-text">复数的几何意义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A4%8D%E6%95%B0%E7%9A%84%E8%BF%90%E7%AE%97"><span class="nav-number">1.2.</span> <span class="nav-text">复数的运算</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%A4%8D%E6%95%B0%E7%9A%84%E4%B8%89%E8%A7%92%E5%BD%A2%E5%BC%8F"><span class="nav-number">2.</span> <span class="nav-text">复数的三角形式</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A4%8D%E6%95%B0%E4%B9%98%E9%99%A4%E8%BF%90%E7%AE%97%E7%9A%84%E4%B8%89%E8%A7%92%E8%A1%A8%E7%A4%BA"><span class="nav-number">2.1.</span> <span class="nav-text">复数乘除运算的三角表示</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A4%8D%E6%95%B0%E7%9A%84%E5%BC%80%E6%96%B9"><span class="nav-number">2.2.</span> <span class="nav-text">复数的开方</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%A4%8D%E6%95%B0%E4%B8%8E%E6%96%B9%E7%A8%8B"><span class="nav-number">3.</span> <span class="nav-text">复数与方程</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E5%85%83%E4%BA%8C%E6%AC%A1%E6%96%B9%E7%A8%8B"><span class="nav-number">3.1.</span> <span class="nav-text">一元二次方程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E5%85%83n%E6%AC%A1%E6%96%B9%E7%A8%8B"><span class="nav-number">3.2.</span> <span class="nav-text">一元\(n\)次方程</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Luckyfuy"
+      src="/images/hikari.jpg">
+  <p class="site-author-name" itemprop="name">Luckyfuy</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">43</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">5</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">19</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/Luckyfuy" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;Luckyfuy" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:mcluckyfuy@gmail.com" title="E-Mail → mailto:mcluckyfuy@gmail.com" rel="noopener me" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://zh.wikipedia.org/wiki/User:Luckyfuy" title="Wikipedia → https:&#x2F;&#x2F;zh.wikipedia.org&#x2F;wiki&#x2F;User:Luckyfuy" rel="noopener me" target="_blank"><i class="fab fa-wikipedia-w fa-fw"></i>Wikipedia</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://www.youtube.com/@luckyfuy" title="YouTube → https:&#x2F;&#x2F;www.youtube.com&#x2F;@luckyfuy" rel="noopener me" target="_blank"><i class="fab fa-youtube fa-fw"></i>YouTube</a>
+      </span>
+  </div>
+  <div class="cc-license animated" itemprop="license">
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans" class="cc-opacity" rel="noopener" target="_blank"><img src="https://cdn.jsdelivr.net/npm/@creativecommons/vocabulary@2020.11.3/assets/license_badges/small/by_nc_sa.svg" alt="Creative Commons"></a>
+  </div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://luckyfuy.top/2022/02/08/Complex-Number/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/hikari.jpg">
+      <meta itemprop="name" content="Luckyfuy">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Luckyfuy's Blog">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="学习笔记·复数 | Luckyfuy's Blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          学习笔记·复数
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2022/02/08, 周二 10:23:43" itemprop="dateCreated datePublished" datetime="2022-02-08T10:23:43+01:00">2022/02/08, 周二</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">数学笔记</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Disqus：</span>
+    
+    <a title="disqus" href="/2022/02/08/Complex-Number/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2022/02/08/Complex-Number/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>3.9k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>14 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><h1 id="复数">复数</h1>
+<p>为了解决<span class="math inline">\(x^{2} + 1 =
+0\)</span>这样的方程在实数系中无解的问题，我们引入一个新数<span
+class="math inline">\(\mathrm{i}\)</span>，使得<span
+class="math inline">\(x = \mathrm{i}\)</span>是方程的解，即满足<span
+class="math inline">\(\mathrm{i}^{2} = -1\)</span>。
+这样，我们就能扩充数系，新数系中的所有数都可以表示为 <span
+class="math display">\[z = a + b \mathrm{i} (a, b \in
+\mathbb{R})\]</span></p>
+<p>形如这种形式的数叫做<strong>复数（complex
+number）</strong>，其中<span
+class="math inline">\(\mathrm{i}\)</span>叫做<strong>虚数单位（imaginary
+unit）</strong>。复数通常用<span class="math inline">\(z,
+w\)</span>等字母表示。全体复数构成<strong>复数集</strong>： <span
+class="math display">\[\mathbb{C} = \{a + b \mathrm{i} | a, b \in
+\mathbb{R}\}\]</span></p>
+<span id="more"></span>
+<p>对于复数<span class="math inline">\(z = a + b \mathrm{i} (a, b \in
+\mathbb{R})\)</span>，其<strong>实部（real part）</strong>为<span
+class="math inline">\(a\)</span>，可以表示为<span
+class="math inline">\(\operatorname{Re}(z)\)</span>或<span
+class="math inline">\(\Re(z)\)</span>；<strong>虚部（imaginary
+part）</strong>为<span class="math inline">\(b\)</span>，可以表示为<span
+class="math inline">\(\operatorname{Im}(z)\)</span>或<span
+class="math inline">\(\Im(z)\)</span>。<br />
+当且仅当<span class="math inline">\(b = 0\)</span>时，<span
+class="math inline">\(z\)</span>为实数。当<span class="math inline">\(b
+\ne 0\)</span>时，<span
+class="math inline">\(z\)</span>为<strong>虚数（imaginary
+number）</strong>；当<span class="math inline">\(a = 0\)</span>且<span
+class="math inline">\(b \ne 0\)</span>时，<span
+class="math inline">\(z\)</span>为<strong>纯虚数</strong>。</p>
+<p>虚数不能比较大小，只有相等和不等两种情况。两个复数相等当且仅当实部和虚部分别相等，即<span
+class="math inline">\(a + b \mathrm{i} = c + d
+\mathrm{i}\)</span>当且仅当<span class="math inline">\(a =
+c\)</span>且<span class="math inline">\(b = d\)</span>，<span
+class="math inline">\(a, b, c, d \in \mathbb{R}\)</span>。</p>
+<h2 id="复数的几何意义">复数的几何意义</h2>
+<p>任何一个复数<span class="math inline">\(z = a + b \mathrm{i} (a, b
+\in \mathbb{R})\)</span>都可以由一个有序实数对<span
+class="math inline">\((a,
+b)\)</span>唯一确定，因此，复数可以和向量建立双射，<span
+class="math inline">\(\{1, \mathrm{i}\}\)</span>就是一组基。<br />
+建立平面直角坐标系，把<span
+class="math inline">\(x\)</span>轴称为<strong>实轴（real
+axis）</strong>，<span
+class="math inline">\(y\)</span>轴称为<strong>虚轴（imaginary
+axis）</strong>。这样，平面内每个点<span class="math inline">\(P(a,
+b)\)</span>都能对应一个向量<span
+class="math inline">\(\overrightarrow{OP} = (a,
+b)\)</span>，并同时对应一个复数<span class="math inline">\(z = a + b
+\mathrm{i}\)</span>。这个平面称为<strong>复平面（complex
+plane）</strong>。<br />
+显然，实轴上的点都表示实数；除了原点外，虚轴上的点都表示纯虚数。虚数单位<span
+class="math inline">\(\mathrm{i}\)</span>就是<span
+class="math inline">\((0, 1)\)</span>。</p>
+<p>对于复平面内的向量<span class="math inline">\(\overrightarrow{OZ} =
+(a, b)\)</span>，<span
+class="math inline">\(\overrightarrow{OZ}\)</span>的模<span
+class="math inline">\(|\overrightarrow{OZ}|\)</span>即为复数<span
+class="math inline">\(z = a + b
+\mathrm{i}\)</span>的<strong>模（modulus）</strong>，记为<span
+class="math inline">\(|z|\)</span>： <span class="math display">\[|z| =
+|a + b \mathrm{i}| = \sqrt{a^{2} + b^{2}}\]</span></p>
+<p>关于模，显然有不等式： <span
+class="math display">\[|\operatorname{Re}(z)| \le |z|,
+|\operatorname{Im}(z)| \le |z|\]</span></p>
+<p>定义<span class="math inline">\(z = a + b \mathrm{i} (a, b \in
+\mathbb{R})\)</span>的<strong>共轭复数（complex conjugate）</strong>
+<span class="math display">\[\bar{z} = a - b \mathrm{i}\]</span></p>
+<p>共轭复数的实部相等，虚部互为相反数。在复平面内，共轭复数关于实轴对称。
+<img src="https://s2.loli.net/2022/02/08/YTkVNrmdiJyFWU4.png"
+title="共轭复数" alt="共轭复数" /></p>
+<p>显然，<span class="math inline">\(|z| = |\bar{z}|\)</span>，<span
+class="math inline">\(\bar{\bar{z}} = z\)</span>。</p>
+<h2 id="复数的运算">复数的运算</h2>
+<p>设复数<span class="math inline">\(z_{1} = a + b \mathrm{i}, z_{2} = c
++ d \mathrm{i} (a, b, c, d \in \mathbb{R})\)</span>，定义复数的加法：
+<span class="math display">\[z_{1} + z_{2} = (a + c) + (b + d)
+\mathrm{i}\]</span></p>
+<p>定义复数的减法为加法的逆运算： <span class="math display">\[z_{1} -
+z_{2} = (a - c) + (b - d) \mathrm{i}\]</span></p>
+<p>容易得到，复数的加减法是满足交换律和结合律的。</p>
+<p>复数的乘法： <span class="math display">\[z_{1} z_{2} = (ac - bd) +
+(ad + bc) \mathrm{i}\]</span></p>
+<p>这可以由<span class="math inline">\(\mathrm{i}^{2} =
+-1\)</span>得到： <span class="math display">\[
+\begin{align}
+z_{1} z_{2} &amp;= ac + a (d \mathrm{i}) + (b \mathrm{i}) c + (b
+\mathrm{i}) (d \mathrm{i}) \\
+&amp;= ac + (ad + bc) \mathrm{i} + bd \mathrm{i}^{2} \\
+&amp;= (ac - bd) + (ad + bc) \mathrm{i} \quad \Box
+\end{align}
+\]</span></p>
+<p>乘法同样满足交换律、结合律，并满足分配律。</p>
+<p>可以看出，复数的加法和乘法可以像多项式一样计算，“合并同类项”。<br />
+复数的加法、减法和数乘实际上与坐标表示的向量的计算是一样的。</p>
+<p>定义非零复数<span class="math inline">\(z = a + b \mathrm{i} (a, b
+\in \mathbb{R})\)</span>的倒数<span
+class="math inline">\(\dfrac{1}{z}\)</span>，满足<span
+class="math inline">\(z \cdot \dfrac{1}{z} =
+1\)</span>。通过解方程组，可以得到<span
+class="math inline">\(\dfrac{1}{z}\)</span>是唯一确定的复数： <span
+class="math display">\[\dfrac{1}{z} = \dfrac{a}{a^{2} + b^{2}} -
+\dfrac{b}{a^{2} + b^{2}} \mathrm{i}\]</span></p>
+<p>那么，设复数<span class="math inline">\(z_{1} = a + b \mathrm{i},
+z_{2} = c + d \mathrm{i} (a, b, c, d \in \mathbb{R}, c + d \mathrm{i}
+\ne 0)\)</span>，定义复数的除法： <span
+class="math display">\[\dfrac{z_{1}}{z_{2}} = \dfrac{ac + bd}{c^{2} +
+d^{2}} + \dfrac{bc - ad}{c^{2} + d^{2}} \mathrm{i}\]</span></p>
+<p>复数的除法也可以看作是<span class="math inline">\(\dfrac{a + b
+\mathrm{i}}{c + d
+\mathrm{i}}\)</span>的分子与分母同乘分母的共轭复数，从而使分母“实数化”：
+<span class="math display">\[
+\begin{align}
+\dfrac{z_{1}}{z_{2}} &amp;= \dfrac{a + b \mathrm{i}}{c + d \mathrm{i}}
+\\
+&amp;= \dfrac{(a + b \mathrm{i}) (c - d \mathrm{i})}{(c + d \mathrm{i})
+(c - d \mathrm{i})} \\
+&amp;= \dfrac{(ac + bd) + (bc - ad) \mathrm{i}}{c^{2} + d^{2}} \\
+&amp;= \dfrac{ac + bd}{c^{2} + d^{2}} + \dfrac{bc - ad}{c^{2} + d^{2}}
+\mathrm{i}
+\end{align}
+\]</span></p>
+<p>除法<span
+class="math inline">\(\dfrac{z_{1}}{z_{2}}\)</span>有时也可以写作<span
+class="math inline">\(z_{1} \div z_{2}\)</span>。</p>
+<p>复数的整数次幂与实数的意义是相同的，<span class="math inline">\(z^{n}
+(n \in \mathbb{N}^{\ast})\)</span>即代表自乘<span
+class="math inline">\(n\)</span>次，而<span class="math inline">\(z^{-n}
+= \dfrac{1}{z^{n}}, z^{0} = 1 (z \ne 0)\)</span>。</p>
+<p>关于共轭复数，有以下几个简单的定理： <span class="math display">\[
+\begin{align}
+&amp; z \cdot \bar{z} = |z|^{2} \\
+&amp; \operatorname{Re}(z) = \dfrac{1}{2} (z + \bar{z}),
+\operatorname{Im}(z) = \dfrac{1}{2 \mathrm{i}} (z - \bar{z}) \\
+&amp; \bar{z} + \bar{w} = \overline{z + w}, \bar{z} \cdot \bar{w} =
+\overline{z w}, \dfrac{\bar{z}}{\bar{w}} = \overline{\dfrac{z}{w}}
+\end{align}
+\]</span></p>
+<p>由此可以得到推论： <span class="math display">\[|zw| = |z| \cdot |w|,
+|\dfrac{z}{w}| = \dfrac{|z|}{|w|}\]</span></p>
+<p>类似向量的三角不等式，复数也有<strong>模不等式</strong>： <span
+class="math display">\[||z| - |w|| \le |z + w| \le |z| +
+|w|\]</span></p>
+<p>不用向量的方法，也可以用复数来证明： <span class="math display">\[
+\begin{align}
+|z + w|^{2} &amp;= (z + w) (\overline{z + w}) \\
+&amp;= (z + w) (\bar{z} + \bar{w}) \\
+&amp;= z \bar{z} + (z \bar{w} + w \bar{z}) + w \bar{w} \\
+&amp;= |z|^{2} + 2 \operatorname{Re}(z \bar{w}) + |w|^{2} \\
+&amp;\le  |z|^{2} + 2 |z| |w| + |w|^{2} \\
+&amp;= (|z| + |w|)^{2}
+\end{align}
+\]</span> 开方就得到右边，同理可得左边。<span
+class="math inline">\(\Box\)</span></p>
+<h1 id="复数的三角形式">复数的三角形式</h1>
+<p>设非零复数<span
+class="math inline">\(z\)</span>在复平面内对应一个点<span
+class="math inline">\(Z\)</span>，<span class="math inline">\(|z| =
+r\)</span>，则<span class="math inline">\(|\overrightarrow{OZ}| =
+r\)</span>。设<span class="math inline">\(\theta\)</span>为以射线<span
+class="math inline">\(OZ\)</span>为终边的角，那么点<span
+class="math inline">\(Z(r \cos \theta, r \sin \theta)\)</span>，也就是
+<span class="math display">\[z = r (\cos \theta + \mathrm{i} \sin
+\theta)\]</span></p>
+<p>这个形式称为复数的<strong>三角形式</strong>，其中<span
+class="math inline">\(\theta\)</span>称为复数<span
+class="math inline">\(z\)</span>的<strong>辐角（argument）</strong>。显然，辐角有无穷多个，但可以找到<span
+class="math inline">\(\theta_{0} \in [0, 2
+\pi)\)</span>，使得对任意辐角都有 <span class="math display">\[\theta =
+\theta_{0} + 2k \pi, k \in \mathbb{Z}\]</span></p>
+<p><span class="math inline">\(\theta_{0}\)</span>称为复数<span
+class="math inline">\(z\)</span>的<strong>辐角主值（principal value of
+an argument）</strong>，通常记为<span class="math inline">\(\arg
+z\)</span>。</p>
+<figure>
+<img src="https://s2.loli.net/2022/02/08/oyGX57csfgMYVQO.png"
+title="三角形式" alt="三角形式" />
+<figcaption aria-hidden="true">三角形式</figcaption>
+</figure>
+<p>为了与三角形式区分，<span class="math inline">\(a + b
+\mathrm{i}\)</span>称为复数的<strong>代数形式</strong>。</p>
+<p>一般情况下，设非零复数<span class="math inline">\(z = a + b
+\mathrm{i}\)</span>，其辐角<span
+class="math inline">\(\theta\)</span>满足 <span
+class="math display">\[\cos \theta = \dfrac{a}{a^{2} + b^{2}}, \sin
+\theta = \dfrac{b}{a^{2} + b^{2}}\]</span></p>
+<p>因此，两个复数相等等价于模和辐角主值分别相等。</p>
+<p><strong>欧拉公式（Euler’s formula）</strong>有： <span
+class="math display">\[\mathrm{e}^{\mathrm{i} \theta} = \cos \theta +
+\mathrm{i} \sin \theta\]</span></p>
+<p>那么，复数就能表示为 <span class="math display">\[z = r
+\mathrm{e}^{\mathrm{i} \theta}\]</span></p>
+<p>这个形式称为复数的<strong>指数形式</strong>。</p>
+<h2 id="复数乘除运算的三角表示">复数乘除运算的三角表示</h2>
+<p>设复数<span class="math inline">\(z_{1} = r_{1} (\cos \theta +
+\mathrm{i} \sin \theta), z_{2} = r_{2} (\cos \varphi + \mathrm{i} \sin
+\varphi)\)</span>，计算两个复数的乘法，根据三角函数公式有： <span
+class="math display">\[
+\begin{align}
+z_{1} z_{2} &amp;= r_{1} r_{2} (\cos \theta + \mathrm{i} \sin \theta)
+(\cos \varphi + \mathrm{i} \sin \varphi) \\
+&amp;= r_{1} r_{2} ((\cos \theta \cos \varphi - \sin \theta \sin
+\varphi) + \mathrm{i} (\sin \theta \cos \varphi + \cos \theta \sin
+\varphi)) \\
+&amp;= r_{1} r_{2} (\cos(\theta + \varphi) + \mathrm{i} \sin(\theta +
+\varphi))
+\end{align}
+\]</span></p>
+<p>这就是说，两个复数相乘，模相乘，辐角相加。用指数形式表示就是： <span
+class="math display">\[r_{1} \mathrm{e}^{\mathrm{i} \theta} \cdot r_{2}
+\mathrm{e}^{\mathrm{i} \varphi} = r_{1} r_{2} \mathrm{e}^{\mathrm{i}
+(\theta + \varphi)}\]</span></p>
+<p>这样是符合指数运算规律的。</p>
+<p>在复平面内，我们可以发现复数乘法<span class="math inline">\(z_{1}
+z_{2}\)</span>的几何意义，就是把<span
+class="math inline">\(z_{1}\)</span>对应的向量的模变为原来的<span
+class="math inline">\(r_{2}\)</span>倍，并逆时针旋转<span
+class="math inline">\(\varphi\)</span>。 <img
+src="https://s2.loli.net/2022/02/08/aoL6NtDhGgIxMjW.png"
+title="复数的乘法" alt="复数的乘法" /></p>
+<p>由此可以发现，复数能表达旋转变换。对于实数<span
+class="math inline">\(\theta\)</span>，映射<span
+class="math inline">\(f(z) = \mathrm{e}^{\mathrm{i} \theta}
+z\)</span>的几何意义就是把<span
+class="math inline">\(z\)</span>对应的向量旋转角<span
+class="math inline">\(\theta\)</span>。</p>
+<p>那么，复数的除法就是 <span
+class="math display">\[\dfrac{z_{1}}{z_{2}} = \dfrac{r_{1} (\cos \theta
++ \mathrm{i} \sin \theta)}{r_{2} (\cos \varphi + \mathrm{i} \sin
+\varphi)} = \dfrac{r_{1}}{r_{2}} (\cos(\theta - \varphi) + \mathrm{i}
+\sin(\theta - \varphi))\]</span></p>
+<p>这样，两个复数相除，模相除，辐角相减。用指数形式表示就是： <span
+class="math display">\[\dfrac{r_{1} \mathrm{e}^{\mathrm{i}
+\theta}}{r_{2} \mathrm{e}^{\mathrm{i} \varphi}} = \dfrac{r_{1}}{r_{2}}
+\mathrm{e}^{\mathrm{i} (\theta - \varphi)}\]</span></p>
+<p>除法的几何意义就与乘法相反，<span
+class="math inline">\(\dfrac{z_{1}}{z_{2}}\)</span>表示把<span
+class="math inline">\(z_{1}\)</span>对应的向量的模变为原来的<span
+class="math inline">\(\dfrac{1}{r_{2}}\)</span>并顺时针旋转<span
+class="math inline">\(\varphi\)</span>所得到的向量对应的复数。</p>
+<h2 id="复数的开方">复数的开方</h2>
+<p>设复数<span class="math inline">\(z = \mathrm{e}^{\mathrm{i}
+\theta}\)</span>，按照指数的运算规律计算，有 <span
+class="math display">\[z^{n} = (\mathrm{e}^{\mathrm{i} \theta})^{n} =
+\mathrm{e}^{\mathrm{i} (n \theta)}\]</span></p>
+<p>这样就得到了<strong>棣莫弗定理（de Moivre’s theorem）</strong>：
+<span class="math display">\[(\cos \theta + \mathrm{i} \sin \theta)^{n}
+= \cos(n \theta) + \mathrm{i} \sin(n \theta)\]</span></p>
+<p>设<span class="math inline">\(z\)</span>为复数，<span
+class="math inline">\(n \in \mathbb{N}^{\ast}\)</span>，若复数<span
+class="math inline">\(w\)</span>满足<span class="math inline">\(w^{n} =
+z\)</span>，则称<span class="math inline">\(w\)</span>为<span
+class="math inline">\(z\)</span>的一个<span
+class="math inline">\(n\)</span>次方根。这样，就能求复数的开方了。<br />
+设非零复数<span class="math inline">\(z = r (\cos \theta + \mathrm{i}
+\sin \theta), w = \rho (\cos \varphi + \mathrm{i} \sin
+\varphi)\)</span>，其中<span class="math inline">\(\theta,
+\varphi\)</span>都是辐角主值。根据棣莫弗定理， <span
+class="math display">\[w^{n} = \rho^{n} (\cos(n \varphi) + \mathrm{i}
+\sin(n \varphi))\]</span> 再由<span class="math inline">\(w^{n} =
+z\)</span>，得<span class="math inline">\(\rho^{n} = r \Rightarrow \rho
+= r^{\frac{1}{n}}\)</span>和<span class="math inline">\(n \varphi =
+\theta + 2k \pi \Rightarrow \varphi = \dfrac{\theta + 2k \pi}{n}, k \in
+\mathbb{Z}\)</span>。这样， <span class="math display">\[0 \le
+\dfrac{\theta + 2k \pi}{n} &lt; 2 \pi \Rightarrow -\dfrac{\theta}{2 \pi}
+\le k &lt; n - \dfrac{\theta}{2 \pi} \Rightarrow -1 &lt; k &lt;
+n\]</span> 所以<span class="math inline">\(k \in \{0, 1, \cdots, n -
+1\}\)</span>。</p>
+<p>这样，就能得到非零复数<span class="math inline">\(z = r (\cos \theta
++ \mathrm{i} \sin \theta) (\theta \in [0, 2 \pi))\)</span>有<span
+class="math inline">\(n\)</span>个<span
+class="math inline">\(n\)</span>次方根： <span
+class="math display">\[w_{k} = r^{\frac{1}{n}} (\cos \dfrac{\theta + 2k
+\pi}{n} + \mathrm{i} \sin \dfrac{\theta + 2k \pi}{n}), k = 0, 1, \cdots,
+n - 1\]</span></p>
+<p>特别地，<span class="math inline">\(1\)</span>的<span
+class="math inline">\(n\)</span>次方根，即一元<span
+class="math inline">\(n\)</span>次方程<span class="math inline">\(x^{n}
+= 1\)</span>的<span class="math inline">\(n\)</span>个根，分别是： <span
+class="math display">\[\xi_{k} = \cos \dfrac{2k \pi}{n} + \mathrm{i}
+\sin \dfrac{2k \pi}{n} = \mathrm{e}^{\mathrm{i} \frac{2k \pi}{n}}, k =
+0, 1, \cdots, n - 1\]</span> <span class="math inline">\(\xi_{0} =
+1\)</span>，就是实数情形下的平凡解。<br />
+<span class="math inline">\(\xi_{0}, \xi_{1}, \cdots, \xi_{n -
+1}\)</span>称为<span
+class="math inline">\(n\)</span>次<strong>单位根（root of
+unity）</strong>，由定义都满足<span class="math inline">\(\xi_{k}^{n} =
+1\)</span>。</p>
+<p>令<span class="math inline">\(\xi = \xi_{1} = \mathrm{e}^{\mathrm{i}
+\frac{2 \pi}{n}}\)</span>，根据棣莫弗定理， <span
+class="math display">\[\xi_{k} = \xi^{k}, k = 0, 1, \cdots, n -
+1\]</span></p>
+<p><span class="math inline">\(\xi^{n} = 1\)</span>，那么<span
+class="math inline">\(\xi^{k} (k \in
+\mathbb{Z})\)</span>就是周期变化的。根据后面的因式定理， <span
+class="math display">\[x^{n} - 1 = \prod_{k=0}^{n - 1} (x - \xi_{k}) =
+\prod_{k=0}^{n - 1} (x - \xi^{k})\]</span></p>
+<p>画图可知，所有的<span
+class="math inline">\(n\)</span>次单位根在复平面内对应的点组成一个正<span
+class="math inline">\(n\)</span>边形。 <img
+src="https://s2.loli.net/2022/02/08/SsPkvQ45H2p9LVd.png"
+title="复平面内的三次单位根" alt="复平面内的三次单位根" /></p>
+<p>根据恒等式 <span class="math display">\[x^{n} - 1 = (x - 1) (x^{n -
+1} + x^{n - 2} + \cdots + 1)\]</span> 只要<span class="math inline">\(k
+\ne 0\)</span>，就有<span class="math inline">\(\xi_{k} \ne
+1\)</span>，这样， <span class="math display">\[0 = \xi_{k}^{n} - 1 =
+(\xi_{k} - 1) (\xi_{k}^{n - 1} + \xi_{k}^{n - 2} + \cdots + 1)\]</span>
+得到 <span class="math display">\[\xi_{k}^{n - 1} + \xi_{k}^{n - 2} +
+\cdots + 1 = 0\]</span></p>
+<p>特别地，令<span class="math inline">\(k = 1\)</span>，得到 <span
+class="math display">\[\xi^{n - 1} + \xi^{n - 2} + \cdots + 1 =
+0\]</span> 由<span class="math inline">\(\xi_{k} =
+\xi^{k}\)</span>，这个式子用求和符号表示就是 <span
+class="math display">\[\sum\limits_{k=0}^{n - 1} \xi_{k} =
+0\]</span></p>
+<h1 id="复数与方程">复数与方程</h1>
+<h2 id="一元二次方程">一元二次方程</h2>
+<p>对于方程<span class="math inline">\(a x^{2} + b x + c = 0 (a, b, c
+\in \mathbb{C}, a \ne 0)\)</span>，配方得到： <span
+class="math display">\[(x + \dfrac{b}{2a})^{2} = \dfrac{b^{2} - 4ac}{4
+a^{2}}\]</span></p>
+<p>对判别式<span class="math inline">\(b^{2} -
+4ac\)</span>开方。设开方得到的两个结果为<span
+class="math inline">\(d_{1, 2}\)</span>，那么方程的根 <span
+class="math display">\[x_{1, 2} = \dfrac{d_{1, 2} - b}{2a}\]</span></p>
+<p>根据复数的开方公式，可以得到<span class="math inline">\(d_{1} + d_{2}
+= 0\)</span>。把其中一个记为<span class="math inline">\(\sqrt{b^{2} -
+4ac}\)</span>，就能得到熟悉的求根公式： <span
+class="math display">\[x_{1, 2} = \dfrac{-b \pm \sqrt{b^{2} -
+4ac}}{2a}\]</span></p>
+<p>如果限定系数范围为<span class="math inline">\(a, b, c \in
+\mathbb{R}\)</span>，那么</p>
+<ol type="1">
+<li>若<span class="math inline">\(b^{2} - 4ac &gt;
+0\)</span>，方程有两个不相等的实根；</li>
+<li>若<span class="math inline">\(b^{2} - 4ac =
+0\)</span>，方程有两个相等的实根；</li>
+<li>若<span class="math inline">\(b^{2} - 4ac &lt;
+0\)</span>，方程有两个共轭虚根： <span class="math display">\[x_{1, 2} =
+\dfrac{-b \pm \sqrt{4ac - b^{2}} \mathrm{i}}{2a}\]</span></li>
+</ol>
+<h2 id="一元n次方程">一元<span
+class="math inline">\(n\)</span>次方程</h2>
+<p><strong>代数基本定理（fundamental theorem of
+algebra）</strong>：<br />
+任何一元<span class="math inline">\(n (n \in
+\mathbb{N}^{\ast})\)</span>次复系数多项式方程<span
+class="math inline">\(f(x) = 0\)</span>至少有一个复数根。</p>
+<p>复系数多项式，是指形如<span
+class="math inline">\(\sum\limits_{k=0}^{n} a_{k} x^{k} (a_{k} \in
+\mathbb{C})\)</span>的式子，最高次非零项的次数就是多项式的次数。<span
+class="math inline">\(0\)</span>称为零多项式，不定义次数。<br />
+这个定理有很多种证明，但都涉及高等数学知识，这里不作介绍。</p>
+<p>设<span class="math inline">\(a\)</span>为复数，<span
+class="math inline">\(f(x)\)</span>为复系数多项式，<strong>因式定理（factor
+theorem）</strong>有：<br />
+<span class="math inline">\(a\)</span>为<span
+class="math inline">\(f(x)\)</span>的根当且仅当<span
+class="math inline">\((x - a)\)</span>为<span
+class="math inline">\(f(x)\)</span>的一个因式。</p>
+<p>证明如下：<br />
+<em>充分性</em>：如果<span class="math inline">\((x - a)\)</span>为<span
+class="math inline">\(f(x)\)</span>的一个因式，那么<span
+class="math inline">\(f(x) = (x - a) g(x)\)</span>，其中<span
+class="math inline">\(g(x)\)</span>为复系数多项式。从而可以得到<span
+class="math inline">\(f(a) = (a - a) g(a) = 0\)</span>。<br />
+<em>必要性</em>：如果<span class="math inline">\(f(a) =
+0\)</span>，设<span class="math inline">\(f(x) = \sum\limits_{k=0}^{n}
+c_{k} x^{k}, c_{k} \in \mathbb{C}\)</span>，那么 <span
+class="math display">\[
+\begin{align}
+f(x) &amp;= f(x) - f(a) \\
+&amp;= \sum\limits_{k=0}^{n} c_{k} x^{k} - \sum\limits_{k=0}^{n} c_{k}
+a^{k} \\
+&amp;= \sum\limits_{k=0}^{n} c_{k} (x^{k} - a^{k}) \\
+&amp;= (x - a) \left(\sum\limits_{k=1}^{n} c_{k} (x^{k - 1} + x^{k - 2}
+a + \cdots + a^{k - 1}) \right) \quad \Box
+\end{align}
+\]</span></p>
+<p>若正整数<span class="math inline">\(k\)</span>满足<span
+class="math inline">\((x - a)^{k}\)</span>为<span
+class="math inline">\(f(x)\)</span>的因式，但<span
+class="math inline">\((x - a)^{k + 1}\)</span>不为<span
+class="math inline">\(f(x)\)</span>的因式，则称<span
+class="math inline">\(a\)</span>为<span
+class="math inline">\(f(x)\)</span>的<strong><span
+class="math inline">\(k\)</span>重根</strong>。二重及以上的根称为<strong>重根</strong>。<br />
+这样，就能由上面两个定理得到推论：<br />
+任何一元<span class="math inline">\(n (n \in
+\mathbb{N}^{\ast})\)</span>次复系数多项式方程<span
+class="math inline">\(f(x) = 0\)</span>都有<span
+class="math inline">\(n\)</span>个复数根（重根按重数计，即把<span
+class="math inline">\(k\)</span>重根当作<span
+class="math inline">\(k\)</span>个根来计）。</p>
+<p>把重根合到一起就得到<strong>唯一分解定理（unique factorization
+theorem）</strong>：<br />
+任何一元<span class="math inline">\(n (n \in
+\mathbb{N}^{\ast})\)</span>次复系数多项式都可以唯一地表示为 <span
+class="math display">\[f(x) = a \prod_{k=1}^{m} (x -
+a_{k})^{f_{k}}\]</span> 其中<span class="math inline">\(a, a_{1},
+\cdots, a_{m} \in \mathbb{C}, f_{1}, f_{2}, \cdots, f_{m} \in
+\mathbb{N}^{\ast}\)</span>，满足<span
+class="math inline">\(\sum\limits_{k=1}^{m} f_{k} = n\)</span>。</p>
+<p>这样，设<span class="math inline">\(f(x) = \sum\limits_{k=0}^{n}
+a_{k} x^{k} (a_{n} \ne 0)\)</span>的根为<span
+class="math inline">\(x_{1}, x_{2}, \cdots, x_{n}\)</span>，<span
+class="math inline">\(f(x)\)</span>就可以表示成： <span
+class="math display">\[f(x) = a_{n} (x - x_{1}) (x - x_{2}) \cdots (x -
+x_{n})\]</span></p>
+<p>展开多项式就能得到<strong>韦达定理（Vieta’s formulas）</strong>：
+<span class="math display">\[\sum\limits_{1 \le i_{1} &lt; i_{2} &lt;
+\cdots &lt; i_{k} \le n} x_{i_{1}} x_{i_{2}} \cdots x_{i_{k}} = (-1)^{k}
+\dfrac{a_{n} - k}{a_{n}}, k = 1, 2, \cdots, n\]</span></p>
+<p>这个式子实际上就等价于 <span class="math display">\[
+\begin{cases}
+x_{1} + x_{2} + \cdots + x_{n} = -\dfrac{a_{n - 1}}{a_{n}} \\
+(x_{1} x_{2} + x_{1} x_{3} + \cdots + x_{1} x_{n}) + (x_{2} x_{3} +
+x_{2} x_{4} + \cdots + x_{2} x_{n}) + \cdots + x_{n - 1} x_{n} =
+\dfrac{a_{n - 2}}{a_{n}} \\
+\quad \vdots \\
+x_{1} x_{2} \cdots x_{n} = (-1)^{n} \dfrac{a_{0}}{a_{n}}
+\end{cases}
+\]</span></p>
+<p>例如，设一元三次方程<span class="math inline">\(a x^{3} + b x^{2} + c
+x + d = 0\)</span>的三个根（计重数）分别为<span
+class="math inline">\(x_{1}, x_{2}, x_{3}\)</span>，则 <span
+class="math display">\[
+\begin{align}
+a x^{3} + b x^{2} + c x + d &amp;= a (x - x_{1}) (x - x_{2}) (x - x_{3})
+\\
+&amp;= a x^{3} - a (x_{1} + x_{2} + x_{3}) x^{2} + a (x_{1} x_{2} +
+x_{2} x_{3} + x_{3} x_{1}) x - x_{1} x_{2} x_{3}
+\end{align}
+\]</span></p>
+<p>比对系数可得三次方程的韦达定理： <span class="math display">\[
+\begin{cases}
+x_{1} + x_{2} + x_{3} = -\dfrac{b}{a} \\
+x_{1} x_{2} + x_{2} x_{3} + x_{3} x_{1} = \dfrac{c}{a} \\
+x_{1} x_{2} x_{3} = -\dfrac{d}{a}
+\end{cases}
+\]</span></p>
+<p>对于实系数多项式，即系数都是实数的多项式，有<strong>虚根成对定理</strong>：<br />
+若复数<span class="math inline">\(a\)</span>是实系数多项式<span
+class="math inline">\(f(x)\)</span>的根，则<span
+class="math inline">\(\bar{a}\)</span>也是<span
+class="math inline">\(f(x)\)</span>的根。</p>
+<p>要证明这个定理，需要用到一个引理：对于任何实系数多项式<span
+class="math inline">\(f\)</span>和复数<span
+class="math inline">\(z\)</span>有<span
+class="math inline">\(\overline{f(z)} =
+f(\bar{z})\)</span>。这个引理的证明如下： <span class="math display">\[
+\begin{align}
+&amp; \quad f(x) = \sum\limits_{k=0}^{n} a_{k} x^{k}, a_{k} \in
+\mathbb{R} \\
+&amp;\Rightarrow a_{k} = \overline{a_{k}} \\
+&amp;\Rightarrow \overline{f(z)} = \overline{\sum\limits_{k=0}^{n} a_{k}
+z^{k}} = \sum\limits_{k=0}^{n} a_{k} \bar{z}^{k} = f(\bar{z})
+\end{align}
+\]</span> 这时，因为<span class="math inline">\(f(a) =
+0\)</span>，所以<span class="math inline">\(f(\bar{a}) = \overline{f(a)}
+= 0\)</span>。<span class="math inline">\(\Box\)</span></p>
+<p>这样，实系数多项式的根，除去实根以外，就都是成对的共轭复数。一元<span
+class="math inline">\(n (n \in
+\mathbb{N}^{\ast})\)</span>次实系数多项式就能在实数范围内分解为： <span
+class="math display">\[f(x) = a \prod_{k=1}^{s} (x - a_{k}) \cdot
+\prod_{k=1}^{t} (x^{2} + b_{k} x + c_{k})\]</span> 其中<span
+class="math inline">\(a, a_{k}, b_{k}, c_{k} \in
+\mathbb{R}\)</span>，<span class="math inline">\(s + 2t =
+n\)</span>，且<span class="math inline">\(c_{k} &gt; 0, b_{k}^{2} &lt; 4
+c_{k}\)</span>。</p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="reward-container">
+  <div>请我一杯咖啡吧！</div>
+  <button>
+    赞赏
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="/images/wechatpay.png" alt="Luckyfuy 微信">
+        <span>微信</span>
+      </div>
+      <div>
+        <img src="/images/alipay.jpg" alt="Luckyfuy 支付宝">
+        <span>支付宝</span>
+      </div>
+
+  </div>
+</div>
+
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>Luckyfuy
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://luckyfuy.top/2022/02/08/Complex-Number/" title="学习笔记·复数">https://luckyfuy.top/2022/02/08/Complex-Number/</a>
+  </li>
+  <li class="post-copyright-license">
+      <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/Mathematics/" rel="tag"># Mathematics</a>
+          </div>
+
+        
+  <div class="social-like a2a_kit a2a_kit_size_32 a2a_default_style">
+    <a class="a2a_dd" target="_blank" rel="noopener" href="https://www.addtoany.com/share"></a>
+      <a class="a2a_button_wechat"></a>
+      <a class="a2a_button_qzone"></a>
+      <a class="a2a_button_sina_weibo"></a>
+      <a class="a2a_button_douban"></a>
+      <a class="a2a_button_telegram"></a>
+      <a class="a2a_button_whatsapp"></a>
+      <a class="a2a_button_line"></a>
+      <a class="a2a_button_twitter"></a>
+      <a class="a2a_button_facebook"></a>
+      <a class="a2a_button_threads"></a>
+  </div>
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2022/01/01/Harmony-Fundamentals/" rel="prev" title="学习笔记·和声学基础">
+                  <i class="fa fa-angle-left"></i> 学习笔记·和声学基础
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2022/02/13/National-System-and-Organization/" rel="next" title="国家制度与组织">
+                  国家制度与组织 <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    
+  <div class="comments" id="disqus_thread">
+    <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
+  </div>
+  
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 2018 – 
+    <span itemprop="copyrightYear">2026</span>
+    <span class="with-love">
+      <i class="fa fa-battery-full"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">Luckyfuy</span>
+  </div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+      <span>站点总字数：</span>
+    <span title="站点总字数">424k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span>站点阅读时长 &asymp;</span>
+    <span title="站点阅读时长">25:43</span>
+  </span>
+</div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+  <a href="https://github.com/Luckyfuy/luckyfuy.github.io" class="github-corner" title="在 GitHub 上关注我" aria-label="在 GitHub 上关注我" rel="noopener" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+<script class="next-config" data-name="disqus" type="application/json">{"enable":true,"shortname":"luckyfuy-blog","count":true,"i18n":{"disqus":"disqus"}}</script>
+<script src="/js/third-party/comments/disqus.js" defer></script>
+
+</body>
+</html>
