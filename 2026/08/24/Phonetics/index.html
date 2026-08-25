@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#9370db"><meta name="generator" content="Hexo 8.1.1">
+<link rel="preconnect" href="https://fonts.googleapis.cn" crossorigin>
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon.ico">
+  <link rel="mask-icon" href="/images/favicon.svg" color="#9370db">
+  <link rel="manifest" href="/images/site.webmanifest">
+  <meta name="google-site-verification" content="I50azh-xtEyVuAVrVZHKk8hEXtVX9qeIIFuYWd9DYQM">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.googleapis.cn/css2?family=Fira+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Noto+Serif+SC:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Fira+Code:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.0.0/css/all.min.css" integrity="sha256-VHqXKFhhMxcpubYf9xiWdCiojEbY9NexQ4jh8AxbvcM=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/themes/purple/pace-theme-minimal.css">
+  <script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous" defer></script>
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"luckyfuy.top","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.26.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"base16/one-light","dark":"base16/onedark"},"prism":{"light":"prism","dark":"prism-dark"},"copy_button":{"enable":true,"style":"flat"},"fold":{"enable":false,"height":500},"language":false},"bookmark":{"enable":false,"color":"#222","save":"manual"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"top_n_per_article":1,"unescape":true,"preload":true}}</script><script src="/js/config.js" defer></script>
+
+    <meta name="description" content="语音学（phonetics）是研究语音的自然属性的科学，包括其产生、传输、解码的过程。因此，语音学一般分为三个分支：发音语音学、声学语音学、感知语音学。 语音学和音系学是两个相互独立而又密不可分的学科。语音学关注语音的自然属性，即语音自身所反映的生理、物理、心理属性；音系学则关注语音的社会属性，即语音在语言系统中的组织形式。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="学习笔记·语音学">
+<meta property="og:url" content="https://luckyfuy.top/2026/08/24/Phonetics/">
+<meta property="og:site_name" content="Luckyfuy&#39;s Blog">
+<meta property="og:description" content="语音学（phonetics）是研究语音的自然属性的科学，包括其产生、传输、解码的过程。因此，语音学一般分为三个分支：发音语音学、声学语音学、感知语音学。 语音学和音系学是两个相互独立而又密不可分的学科。语音学关注语音的自然属性，即语音自身所反映的生理、物理、心理属性；音系学则关注语音的社会属性，即语音在语言系统中的组织形式。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://files.seeusercontent.com/2026/08/25/2Bad/ce5c470.png">
+<meta property="og:image" content="https://files.seeusercontent.com/2026/08/25/L5rk/33b8371.webp">
+<meta property="og:image" content="https://files.seeusercontent.com/2026/08/25/7Sgb/38e3be4.png">
+<meta property="og:image" content="https://files.seeusercontent.com/2026/08/25/o0Qu/80c8439.png">
+<meta property="og:image" content="https://files.seeusercontent.com/2026/08/25/vCp5/0ffea70.png">
+<meta property="article:published_time" content="2026-08-24T14:41:28.000Z">
+<meta property="article:modified_time" content="2026-08-25T13:53:19.462Z">
+<meta property="article:author" content="Luckyfuy">
+<meta property="article:tag" content="Linguistics">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://files.seeusercontent.com/2026/08/25/2Bad/ce5c470.png">
+
+
+<link rel="canonical" href="https://luckyfuy.top/2026/08/24/Phonetics/">
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://luckyfuy.top/2026/08/24/Phonetics/","path":"2026/08/24/Phonetics/","title":"学习笔记·语音学"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>学习笔记·语音学 | Luckyfuy's Blog</title>
+  
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-KZ6R08BNYM"></script>
+  <script class="next-config" data-name="google_analytics" type="application/json">{"tracking_id":"G-KZ6R08BNYM","only_pageview":false,"measure_protocol_api_secret":null}</script>
+  <script src="/js/third-party/analytics/google-analytics.js" defer></script>
+
+
+
+
+
+
+
+
+  
+  <script size="300" alpha="0.6" zIndex="-1" src="https://cdn.jsdelivr.net/npm/ribbon.js@1.0.2/dist/ribbon.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous" defer></script>
+<script src="/js/utils.js" defer></script><script src="/js/motion.js" defer></script><script src="/js/sidebar.js" defer></script><script src="/js/next-boot.js" defer></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/hexo-generator-searchdb@1.5.0/dist/search.js" integrity="sha256-xFC6PJ82SL9b3WkGjFavNiA9gm5z6UBxWPiu4CYjptg=" crossorigin="anonymous" defer></script>
+<script src="/js/third-party/search/local-search.js" defer></script>
+
+
+
+
+
+  <script src="/js/third-party/pace.js" defer></script>
+
+  <script src="/js/third-party/addtoany.js" defer></script>
+
+  
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">false</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
+<script src="/js/third-party/math/mathjax.js" defer></script>
+
+
+
+    <link rel="stylesheet" href="https://fonts.googleapis.cn/css2?family=Noto+Serif+JP:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap&subset=latin,latin-ext">
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">Luckyfuy's Blog</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li><li class="menu-item menu-item-lab"><a href="/lab/" rel="section"><i class="fa fa-flask fa-fw"></i>实验室</a></li><li class="menu-item menu-item-resource"><a href="/resource/" rel="section"><i class="fa fa-file fa-fw"></i>资源</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+      <div class="search-header">
+        <span class="search-icon">
+          <i class="fa fa-search"></i>
+        </span>
+        <div class="search-input-container">
+          <input autocomplete="off" autocapitalize="off" maxlength="80"
+                placeholder="搜索..." spellcheck="false"
+                type="search" class="search-input">
+        </div>
+        <span class="popup-btn-close" role="button">
+          <i class="fa fa-times-circle"></i>
+        </span>
+      </div>
+      <div class="search-result-container">
+        <div class="search-result-icon">
+          <i class="fa fa-spinner fa-pulse fa-5x"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%9F%B3%E7%B4%A0"><span class="nav-number">1.</span> <span class="nav-text">音素</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8F%91%E9%9F%B3%E8%AF%AD%E9%9F%B3%E5%AD%A6"><span class="nav-number">2.</span> <span class="nav-text">发音语音学</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BE%85%E9%9F%B3"><span class="nav-number">2.1.</span> <span class="nav-text">辅音</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%83%E9%9F%B3"><span class="nav-number">2.2.</span> <span class="nav-text">元音</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%A3%B0%E5%AD%A6%E8%AF%AD%E9%9F%B3%E5%AD%A6"><span class="nav-number">3.</span> <span class="nav-text">声学语音学</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%84%9F%E7%9F%A5%E8%AF%AD%E9%9F%B3%E5%AD%A6"><span class="nav-number">4.</span> <span class="nav-text">感知语音学</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E4%B9%A6%E7%9B%AE"><span class="nav-number">5.</span> <span class="nav-text">参考书目</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Luckyfuy"
+      src="/images/hikari.jpg">
+  <p class="site-author-name" itemprop="name">Luckyfuy</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">46</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">5</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">21</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/Luckyfuy" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;Luckyfuy" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:mcluckyfuy@gmail.com" title="E-Mail → mailto:mcluckyfuy@gmail.com" rel="noopener me" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://zh.wikipedia.org/wiki/User:Luckyfuy" title="Wikipedia → https:&#x2F;&#x2F;zh.wikipedia.org&#x2F;wiki&#x2F;User:Luckyfuy" rel="noopener me" target="_blank"><i class="fab fa-wikipedia-w fa-fw"></i>Wikipedia</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://www.youtube.com/@luckyfuy" title="YouTube → https:&#x2F;&#x2F;www.youtube.com&#x2F;@luckyfuy" rel="noopener me" target="_blank"><i class="fab fa-youtube fa-fw"></i>YouTube</a>
+      </span>
+  </div>
+  <div class="cc-license animated" itemprop="license">
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans" class="cc-opacity" rel="noopener" target="_blank"><img src="https://cdn.jsdelivr.net/npm/@creativecommons/vocabulary@2020.11.3/assets/license_badges/small/by_nc_sa.svg" alt="Creative Commons"></a>
+  </div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://luckyfuy.top/2026/08/24/Phonetics/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/hikari.jpg">
+      <meta itemprop="name" content="Luckyfuy">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Luckyfuy's Blog">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="学习笔记·语音学 | Luckyfuy's Blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          学习笔记·语音学
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2026/08/24, 周一 22:41:28" itemprop="dateCreated datePublished" datetime="2026-08-24T22:41:28+08:00">2026/08/24, 周一</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E8%AF%AD%E8%A8%80%E5%AD%A6%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">语言学笔记</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Disqus：</span>
+    
+    <a title="disqus" href="/2026/08/24/Phonetics/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2026/08/24/Phonetics/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>3.5k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>13 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><p><strong>语音学（phonetics）</strong>是研究语音的自然属性的科学，包括其产生、传输、解码的过程。因此，语音学一般分为三个分支：发音语音学、声学语音学、感知语音学。<br />
+语音学和音系学是两个相互独立而又密不可分的学科。语音学关注语音的自然属性，即语音自身所反映的生理、物理、心理属性；音系学则关注语音的社会属性，即语音在语言系统中的组织形式。</p>
+<span id="more"></span>
+<h1 id="音素">音素</h1>
+<p>声音是连续的，但我们在发音或听音时，总能将语音切分为若干个离散的语音单位。其中，<strong>音素（phone）</strong>是最小的语音单位，也称<strong>音段（segment）</strong>。对于所有语言来说，可用的音素都是一样的。<br />
+为了描述语音，必须制定一套符号系统用以记录音素，即<strong>音标（phonetic
+alphabet）</strong>。1888年，<a
+target="_blank" rel="noopener" href="https://www.internationalphoneticassociation.org/"
+title="International Phonetic Association">国际语音学学会（International
+Phonetic Association,
+IPA）</a>的前身基于拉丁字母制定了一套音标，经过多次修订，成为了使用最广泛的音标，称为<a
+target="_blank" rel="noopener" href="https://www.internationalphoneticassociation.org/IPAcharts/IPA_charts_TI/IPA_charts_TI.html#eng"
+title="The International Phonetic Alphabet"><strong>国际音标（International
+Phonetic Alphabet,
+IPA）</strong></a>。国际音标的一个字母就代表一个音素。<br />
+用国际音标记录语音的过程称为<strong>标音</strong>或<strong>转写（transcription）</strong>。根据转写的精度要求，可以分为<strong>宽式转写（broad
+transcription）</strong>和<strong>严式转写（narrow
+transcription）</strong>。宽式转写只记录最明显的语音特征，严式转写则更加精确，通过更多的附加符号来记录更多的细节，两种转写之间的区别是一种连续体。为了区分日常书写的字母，国际音标一般写在方括号[]内。</p>
+<figure>
+<img src="https://files.seeusercontent.com/2026/08/25/2Bad/ce5c470.png"
+title="国际音标表" alt="国际音标表" />
+<figcaption aria-hidden="true">国际音标表</figcaption>
+</figure>
+<p>然而，相同的音素在不同的语言中的作用可能不同。例如，汉语的不送气音[p]和送气音[pʰ]具有区分词的语音形式的作用：「标」[pjɑʊ]和「飘」[pʰjɑʊ]的区别仅仅在于辅音送气与否，两者却是不同的词。两个音素在其它的音都相同的环境下独立承担区分词的语音形式的作用，两者互换会改变意义，称为<strong>对立分布（contrastive
+distribution）</strong>。英语的[p]只出现在[s]后面，词首和其它位置都是[pʰ]，例如sport的p
+[p]和port的p
+[pʰ]，两者互换并不会引起混淆。两个音素在某一特定位置上只会出现其中一个，出现环境相互补充，两者互换不会改变意义，称为<strong>互补分布（complementary
+distribution）</strong>。[p]和[pʰ]在两种语言中的发音相同，作用却完全不同。</p>
+<p><strong>音位（phoneme）</strong>是能够区别意义的最小的语音单位，是音素之上的一种抽象单位。处于对立分布的不同音素必然属于不同音位，这是划分音位的主要依据。国际音标表示音位时写在双斜线//内，即<strong>音位转写（phonemic
+transcription）</strong>，例如汉语的/p/和/pʰ/就是不同音位；表示音素时仍写在方括号[]内，即<strong>音素转写（phonetic
+transcription）</strong>。<br />
+处于互补分布的不同音素可以被归并为一个音位，互补的各音素称为该音位的<strong>音位变体（allophone）</strong>。例如，英语的[p]和[pʰ]是同一音位/p/的两个变体。不过，互补音素的归并还需要考虑到语音的相似。例如，普通话的[t]只出现在音节首，[ŋ]只出现在音节尾，属于互补分布。但是两者语音差别很大，所以应当分别设立音位。<br />
+上述音位都是由音素构成的，音素之间的差异在于音质，所以由音素构成的音位称为<strong>音质音位</strong>或<strong>音段音位（segmental
+phoneme）</strong>。除音质外，音高、音长、音强有时也能区别意义，从而构成音位，这些由音高、音长、音强构成的音位称为<strong>非音质音位</strong>或<strong>超音段音位（suprasegmental
+phoneme）</strong>。例如，汉语的声调具有区分词的语音形式的作用，这就是由音高构成的音位。</p>
+<h1 id="发音语音学">发音语音学</h1>
+<p><strong>发音语音学（articulatory
+phonetics）</strong>研究人类产生语音的过程，关注的是语音所反映的生理属性。</p>
+<p>人类的发音器官分为三大部分：动力（肺）、发音体（声带）和共鸣腔（口腔、鼻腔、咽腔）。人类的发音也必须经过三个步骤：气流、发声和调音。<strong>气流（initiation）</strong>是肺所起的作用，<strong>发声（phonation）</strong>是声带所起的作用，<strong>调音（articulation）</strong>主要是口腔所起的作用。</p>
+<p><strong>肺（lung）</strong>是胸腔内的呼吸器官，有左右两个，可以随着胸腔扩大或缩小。肺部收缩时，里面的空气经过气管、喉腔、咽腔向口腔或鼻腔外面流出，即呼气；肺部扩张时，空气从外面流入，即吸气。发音多依赖呼气，少数语言也有吸气音。<br />
+<strong>声带（vocal
+cords）</strong>是喉腔内的两瓣组织襞，可以左右分开或合拢。声带是声门的一部分，声带中间的通道称为声门裂。发浊音时，声门闭合，气流冲击声带使其发生振动，随后声门出现较窄的通道；不发音或发清音时，声门开放，气流可以自由通过，声带不振动。</p>
+<p><strong>口腔（oral
+cavity）</strong>是唇、腭、颊与口底之间的空间。口腔前部是嘴唇和牙齿，均分为上下两部分。口腔顶部主要是腭部，分为硬腭和软腭。硬腭前方与上齿之间的区域称为齿龈，中间有一条称作牙槽嵴的凸起，将齿龈分为齿龈前和齿龈后。腭部靠前的水平骨板称为硬腭，靠后的软组织则称为软腭。悬雍垂悬挂于软腭末端，又称小舌。<br />
+舌头位于口腔底部，是口腔中最重要的器官。舌的尖端称为舌尖。舌自然平伸时，与齿龈相对的部分称为舌叶。舌尖和舌叶统称舌冠。舌叶后方的部分是舌面，又称舌背，舌面前部与硬腭相对，舌面后部与软腭相对。舌背后方与咽腔相对的部分是舌根，舌根向前或向后运动可以使咽腔的空间扩大或缩小。<br />
+<strong>鼻腔（nasal
+cavity）</strong>是鼻子内部的空间，与鼻窦相通。鼻子通过左右两个鼻孔与外界相通，并通过后部的两个鼻后孔与咽腔相通。
+<strong>咽腔（pharynx）</strong>位于喉部上方，是口腔、鼻腔和食道、气管汇合的地方。咽喉之间有一块称作会厌的软骨。呼吸或说话时，会厌打开，空气可以自由通过；吞咽时，会厌关闭，食物或者液体进入食道。咽腔向上可以通到口腔或鼻腔：软腭下垂时，气流通入鼻腔；软腭抬起时，气流通入口腔。喉腔、咽腔、口腔、鼻腔共同组成了人类的<strong>声道（vocal
+tract）</strong>。成人男性的声道平均长度约为17 cm，女性约为14 cm。<br />
+上述发音器官可以改变共鸣腔的形状，从而改变音质，称为<strong>调音部位（place
+of
+articulation）</strong>。唇、舌冠、舌背、舌根、声门可以主动活动，称为<strong>主动调音部位（active
+articulator）</strong>。齿、齿龈、硬腭、软腭、小舌、咽、会厌无法自由活动，称为<strong>被动调音部位（passive
+articulator）</strong>。调音的一般机制就是主动调音部位接近或触碰被动调音部位。<br />
+调音部位如图所示：（1.外唇、2.内唇、3.齿、4.齿龈、5.龈后、6.硬腭前、7.硬腭、8.软腭、9.小舌、10.咽、11.声门、12.会厌、13.舌根、14.舌面后、15.舌面前、16.舌叶、17.舌尖、18.舌尖下）</p>
+<figure>
+<img src="https://files.seeusercontent.com/2026/08/25/L5rk/33b8371.webp"
+title="调音部位" alt="调音部位" />
+<figcaption aria-hidden="true">调音部位</figcaption>
+</figure>
+<h2 id="辅音">辅音</h2>
+<figure>
+<img src="https://files.seeusercontent.com/2026/08/25/7Sgb/38e3be4.png"
+title="辅音（肺部气流音）" alt="辅音（肺部气流音）" />
+<figcaption aria-hidden="true">辅音（肺部气流音）</figcaption>
+</figure>
+<p><strong>辅音</strong>是气流在口腔中受到阻碍而发出的音，形成辅音必须经过成阻、持阻、除阻三个阶段。依据调音方法的不同，先闭塞后破裂的辅音称为<strong>塞音</strong>，如[p][t][k]等；口腔形成狭窄的通道，使气流通过时形成湍流发生摩擦的辅音称为<strong>擦音</strong>，如[f][s][x]等。塞音和擦音可以结合成<strong>塞擦音</strong>，成阻阶段是塞音，除阻阶段是擦音，如[pf][ts][tɕ]等；塞擦音是一个整体，而非两个辅音的并列，因此有时用连结号相连，如[p͡f][t͡s][t͡ɕ]等。<br />
+发音器官（舌尖或小舌等）发生颤动的辅音称为<strong>颤音</strong>，如[r][ʀ]等；如果舌尖只是轻微闪颤一下，发出的辅音称为<strong>闪音</strong>，如[ɾ]等。舌头在口腔中间堵住气流，使气流从两边通过的辅音称为<strong>边音</strong>，如[l]等。<strong>近音</strong>和<strong>半元音</strong>介于元音和辅音之间，例如齿龈近音[ɹ]、卷舌近音[ɻ]以及元音[i][u][y]对应的半元音（近音）[j][w][ɥ]等。<br />
+上述辅音的共鸣腔都是口腔。软腭下垂，堵住口腔通道，使气流从鼻腔通过，就形成<strong>鼻音</strong>，如[m][n][ŋ]等。鼻音也可以视为塞音的一种。</p>
+<p>依据声带振动与否，辅音可以分为<strong>清音</strong>和<strong>浊音</strong>。例如，清音[p][t][k][f][s]对应的浊音是[b][d][g][v][z]。依据除阻时呼气强度，辅音又可以分为<strong>送气音</strong>和<strong>不送气音</strong>。国际音标用上标ʰ表示送气，例如不送气音[t]对应的送气音[tʰ]；汉语言学界又用ʻ来表示，如[tʻ]。</p>
+<p>依据调音部位的不同，辅音又可以分为唇音、舌冠音（舌尖音、舌叶音）、舌面音、喉音等，或是分为双唇音、唇齿音、齿音、齿龈音、龈后音、卷舌音、龈颚音、硬颚音、软腭音、小舌音、声门音等。</p>
+<figure>
+<img src="https://files.seeusercontent.com/2026/08/25/o0Qu/80c8439.png"
+title="辅音（非肺部气流音）" alt="辅音（非肺部气流音）" />
+<figcaption aria-hidden="true">辅音（非肺部气流音）</figcaption>
+</figure>
+<h2 id="元音">元音</h2>
+<figure>
+<img src="https://files.seeusercontent.com/2026/08/25/vCp5/0ffea70.png"
+title="元音" alt="元音" />
+<figcaption aria-hidden="true">元音</figcaption>
+</figure>
+<p><strong>元音</strong>的调音部位主要是舌、唇和软腭。<strong>舌面元音</strong>是最基本的元音。舌的前后位置、嘴的开闭以及唇的圆展共同决定了元音的音质。最闭、最前的不圆唇元音，就是闭前不圆唇元音[i]；最闭、最后的圆唇元音，就是闭后圆唇元音[u]；最开、最前的不圆唇元音，就是开前不圆唇元音[a]；最开、最后的圆唇元音，就是开后圆唇元音[ɒ]。以这四个元音为顶点，就能画出如上图所示的元音舌位图。<br />
+前元音和央元音以不圆唇居多，后元音以圆唇居多。舌面前部翘起，由开到闭常见的有[a][ɛ][e][i]，中前不圆唇元音[e̞]在汉语言学界通常写作[ᴇ]；对应也有圆唇元音，例如[ɛ]对应[œ]，[e]对应[ø]，[i]对应[y]。舌面中部翘起，比较常见的只有中央元音[ə]，还有在汉语言学界通常写作[ᴀ]的开央不圆唇元音[ä]。舌面后部翘起，由开到闭常见的有[ɒ][ɔ][o][u]，对应不圆唇元音为[ɑ][ʌ][ɤ][ɯ]。<br />
+上述元音发音时，只有口腔一个共鸣腔。如果发音时软腭下垂，使得气流同时通过口腔和鼻腔，引起口腔和鼻腔同时共鸣，就形成<strong>鼻化元音</strong>。国际音标用~表示鼻音化，如[ã][ẽ][ɔ̃][õ]等。<br />
+舌头位置稍前，舌尖向硬腭前部翘起，就是带有卷舌特征的<strong>卷舌元音</strong>，出现在汉语的儿化音里。国际音标用˞表示，如中央元音[ə]变为[ɚ]。<br />
+除了舌面元音外，还有在汉语之外的语言较少见的<strong>舌尖元音</strong>。舌尖前音[ɿ]只出现在舌尖辅音[ts][tsʰ][s]后，舌尖后音[ʅ]只出现在舌尖辅音[tʂ][tʂʰ][ʂ]后。舌尖元音通常也被视为音节性的辅音，舌尖前音为音节性的齿龈近音[ɹ̩]，舌尖后音为音节性的卷舌近音[ɻ̍]。</p>
+<h1 id="声学语音学">声学语音学</h1>
+<p>语音的物理形式是声波，声学上有四要素：音高、音长、音强、音质。<br />
+<strong>音高</strong>在声学上称为基频，由发音体振动的基本频率决定。长而厚的发音体振动慢，短而薄的发音体振动快，因此男性的音高较低，女性和儿童的音高较高。<br />
+<strong>音长</strong>在声学上称为时长，由发音体振动的持续时间的长短决定。<br />
+<strong>音强</strong>在声学上称为响度，由发音体振动的振幅决定。<br />
+<strong>音质</strong>也称为音色，由发音体、发音方法和共鸣腔形状决定。语音的音质也取决于这三个方面：第一是气流通过口腔时是否受阻以及受阻部位或不受阻时的口腔形状，第二是受阻时的除阻方法，第三是声带是否振动。音素正是从音质角度划分的语音单位，一种音素就代表一种音质。</p>
+<h1 id="感知语音学">感知语音学</h1>
+<h1 id="参考书目">参考书目</h1>
+<ul>
+<li>Peter Ladefoged, Keith Johnson. <em>A Course in Phonetics</em>, 7th
+Edition. Cengage Learning
+<ul>
+<li>《语音学教程》，第七版，张维佳、田飞洋 译．北京大学出版社</li>
+</ul></li>
+<li>林焘、王理嘉．《语音学教程》，增订版．北京大学出版社</li>
+<li>国际语音学会．《国际语音学会手册：国际音标使用指南》，中文修订本，江荻
+/ 孟雯 译校．上海教育出版社</li>
+<li>鲍怀翘、林茂灿．《实验语音学概要》，增订版．北京大学出版社</li>
+<li>Henning Reetz, Allard Jongman. <em>Phonetics: Transcription,
+Production, Acoustics, and Perception</em>, 2nd Edition. Wiley-Blackwell
+<ul>
+<li>《语音学：标音、产生、声学和感知》，曹梦雪、李爱军
+译．中国社会科学出版社</li>
+</ul></li>
+</ul>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="reward-container">
+  <div>请我一杯咖啡吧！</div>
+  <button>
+    赞赏
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="/images/wechatpay.png" alt="Luckyfuy 微信">
+        <span>微信</span>
+      </div>
+      <div>
+        <img src="/images/alipay.jpg" alt="Luckyfuy 支付宝">
+        <span>支付宝</span>
+      </div>
+
+  </div>
+</div>
+
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>Luckyfuy
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://luckyfuy.top/2026/08/24/Phonetics/" title="学习笔记·语音学">https://luckyfuy.top/2026/08/24/Phonetics/</a>
+  </li>
+  <li class="post-copyright-license">
+      <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/Linguistics/" rel="tag"># Linguistics</a>
+          </div>
+
+        
+  <div class="social-like a2a_kit a2a_kit_size_32 a2a_default_style">
+    <a class="a2a_dd" target="_blank" rel="noopener" href="https://www.addtoany.com/share"></a>
+      <a class="a2a_button_wechat"></a>
+      <a class="a2a_button_qzone"></a>
+      <a class="a2a_button_sina_weibo"></a>
+      <a class="a2a_button_douban"></a>
+      <a class="a2a_button_telegram"></a>
+      <a class="a2a_button_whatsapp"></a>
+      <a class="a2a_button_line"></a>
+      <a class="a2a_button_twitter"></a>
+      <a class="a2a_button_facebook"></a>
+      <a class="a2a_button_threads"></a>
+  </div>
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2026/07/23/Uzbek-Orthography/" rel="prev" title="学习笔记·乌兹别克语音系与正字法">
+                  <i class="fa fa-angle-left"></i> 学习笔记·乌兹别克语音系与正字法
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    
+  <div class="comments" id="disqus_thread">
+    <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
+  </div>
+  
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 2018 – 
+    <span itemprop="copyrightYear">2026</span>
+    <span class="with-love">
+      <i class="fa fa-battery-full"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">Luckyfuy</span>
+  </div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+      <span>站点总字数：</span>
+    <span title="站点总字数">448k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span>站点阅读时长 &asymp;</span>
+    <span title="站点阅读时长">27:09</span>
+  </span>
+</div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+  <a href="https://github.com/Luckyfuy/luckyfuy.github.io" class="github-corner" title="在 GitHub 上关注我" aria-label="在 GitHub 上关注我" rel="noopener" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+<script class="next-config" data-name="disqus" type="application/json">{"enable":true,"shortname":"luckyfuy-blog","count":true,"i18n":{"disqus":"disqus"}}</script>
+<script src="/js/third-party/comments/disqus.js" defer></script>
+
+</body>
+</html>
