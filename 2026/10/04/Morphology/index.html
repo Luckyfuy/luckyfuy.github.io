@@ -24,27 +24,27 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"luckyfuy.top","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.26.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"base16/one-light","dark":"base16/onedark"},"prism":{"light":"prism","dark":"prism-dark"},"copy_button":{"enable":true,"style":"flat"},"fold":{"enable":false,"height":500},"language":false},"bookmark":{"enable":false,"color":"#222","save":"manual"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"top_n_per_article":1,"unescape":true,"preload":true}}</script><script src="/js/config.js" defer></script>
 
-    <meta name="description" content="前言 相较于传统的Python打包工具pyinstaller，Nuitka具有更高的效率和安全性。不过，Nuitka的上手难度稍高。">
+    <meta name="description" content="形态学（morphology），又称词法学，是研究构词规则——即语素组合成词的规则的科学，是语法的一部分。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Nuitka的简要使用">
-<meta property="og:url" content="https://luckyfuy.top/2023/02/11/Nuitka-Usage/">
+<meta property="og:title" content="学习笔记·形态学">
+<meta property="og:url" content="https://luckyfuy.top/2026/10/04/Morphology/">
 <meta property="og:site_name" content="Luckyfuy&#39;s Blog">
-<meta property="og:description" content="前言 相较于传统的Python打包工具pyinstaller，Nuitka具有更高的效率和安全性。不过，Nuitka的上手难度稍高。">
+<meta property="og:description" content="形态学（morphology），又称词法学，是研究构词规则——即语素组合成词的规则的科学，是语法的一部分。">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2023-02-11T21:19:20.000Z">
-<meta property="article:modified_time" content="2026-01-04T21:16:01.999Z">
+<meta property="article:published_time" content="2026-10-04T18:59:55.000Z">
+<meta property="article:modified_time" content="2026-10-05T01:57:35.092Z">
 <meta property="article:author" content="Luckyfuy">
-<meta property="article:tag" content="Python">
+<meta property="article:tag" content="Linguistics">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="https://luckyfuy.top/2023/02/11/Nuitka-Usage/">
+<link rel="canonical" href="https://luckyfuy.top/2026/10/04/Morphology/">
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://luckyfuy.top/2023/02/11/Nuitka-Usage/","path":"2023/02/11/Nuitka-Usage/","title":"Nuitka的简要使用"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://luckyfuy.top/2026/10/04/Morphology/","path":"2026/10/04/Morphology/","title":"学习笔记·形态学"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>Nuitka的简要使用 | Luckyfuy's Blog</title>
+<title>学习笔记·形态学 | Luckyfuy's Blog</title>
   
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-KZ6R08BNYM"></script>
   <script class="next-config" data-name="google_analytics" type="application/json">{"tracking_id":"G-KZ6R08BNYM","only_pageview":false,"measure_protocol_api_secret":null}</script>
@@ -176,7 +176,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AE%89%E8%A3%85"><span class="nav-number">2.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8"><span class="nav-number">3.</span> <span class="nav-text">使用</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%AF%8D"><span class="nav-number">1.</span> <span class="nav-text">词</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%AF%AD%E7%B4%A0"><span class="nav-number">2.</span> <span class="nav-text">语素</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BC%A0%E7%BB%9F%E5%BD%A2%E6%80%81%E5%AD%A6%E7%9A%84%E8%AF%AD%E7%B4%A0"><span class="nav-number">2.1.</span> <span class="nav-text">传统形态学的语素</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AF%B9%E4%BC%A0%E7%BB%9F%E5%BD%A2%E6%80%81%E5%AD%A6%E7%9A%84%E6%89%B9%E8%AF%84"><span class="nav-number">2.2.</span> <span class="nav-text">对传统形态学的批评</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BD%93%E4%BB%A3%E5%BD%A2%E6%80%81%E5%AD%A6%E7%9A%84%E8%AF%AD%E7%B4%A0"><span class="nav-number">2.3.</span> <span class="nav-text">当代形态学的语素</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AE%9E%E7%8E%B0%E5%85%B3%E7%B3%BB"><span class="nav-number">3.</span> <span class="nav-text">实现关系</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -246,7 +246,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://luckyfuy.top/2023/02/11/Nuitka-Usage/">
+    <link itemprop="mainEntityOfPage" href="https://luckyfuy.top/2026/10/04/Morphology/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/hikari.jpg">
@@ -259,12 +259,12 @@
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="Nuitka的简要使用 | Luckyfuy's Blog">
+      <meta itemprop="name" content="学习笔记·形态学 | Luckyfuy's Blog">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          Nuitka的简要使用
+          学习笔记·形态学
         </h1>
 
         <div class="post-meta-container">
@@ -275,7 +275,16 @@
       </span>
       <span class="post-meta-item-text">发表于</span>
 
-      <time title="创建时间：2023/02/11, 周六 22:19:20" itemprop="dateCreated datePublished" datetime="2023-02-11T22:19:20+01:00">2023/02/11, 周六</time>
+      <time title="创建时间：2026/10/04, 周日 20:59:55" itemprop="dateCreated datePublished" datetime="2026-10-04T20:59:55+02:00">2026/10/04, 周日</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E8%AF%AD%E8%A8%80%E5%AD%A6%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">语言学笔记</span></a>
+        </span>
     </span>
 
   
@@ -294,8 +303,8 @@
       </span>
       <span class="post-meta-item-text">Disqus：</span>
     
-    <a title="disqus" href="/2023/02/11/Nuitka-Usage/#disqus_thread" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2023/02/11/Nuitka-Usage/" itemprop="commentCount"></span>
+    <a title="disqus" href="/2026/10/04/Morphology/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2026/10/04/Morphology/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -306,14 +315,14 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>411</span>
+      <span>3k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>1 分钟</span>
+      <span>11 分钟</span>
     </span>
 </div>
 
@@ -323,39 +332,120 @@
     
     
     
-    <div class="post-body" itemprop="articleBody"><h1 id="前言">前言</h1>
-<p>相较于传统的Python打包工具<a target="_blank" rel="noopener" href="https://pyinstaller.org/"
-title="pyinstaller">pyinstaller</a>，<a target="_blank" rel="noopener" href="https://www.nuitka.net/"
-title="Nuitka">Nuitka</a>具有更高的效率和安全性。不过，Nuitka的上手难度稍高。</p>
+    <div class="post-body" itemprop="articleBody"><p><strong>形态学（morphology）</strong>，又称<strong>词法学</strong>，是研究构词规则——即语素组合成词的规则的科学，是语法的一部分。</p>
 <span id="more"></span>
-<h1 id="安装">安装</h1>
-<p>推荐使用pip安装： <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install Nuitka</span><br></pre></td></tr></table></figure> 如果下载缓慢，可以参考<a
-href="/2019/11/03/PIP-Mirror/"
-title="PIP更换国内镜像源">这篇文章</a>。</p>
-<p>如果要用到<code>--onefile</code>参数，可以安装zstandard压缩文件：
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install zstandard</span><br></pre></td></tr></table></figure></p>
-<p>此外，还需要下载C++编译器<a target="_blank" rel="noopener" href="https://www.mingw-w64.org/"
-title="MinGW-w64">MinGW</a>。</p>
-<h1 id="使用">使用</h1>
-<p>使用以下命令即可从<code>main.py</code>编译生成<code>.exe</code>文件：
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nuitka --mingw64 main.py</span><br></pre></td></tr></table></figure></p>
-<p><code>--follow-imports</code>参数编译所有调用的模块，此时可以用<code>--nofollow-import-to</code>不编译指定模块。<code>--nofollow-imports</code>参数不编译所有模块，此时可以用<code>--follow-import-to=</code>参数编译指定模块。<br />
-例如，<code>main.py</code>中调用了<code>config.py</code>，那么就要用参数<code>--follow-imports</code>或<code>--follow-import-to=config.py</code>。</p>
-<p>为了方便移植，可以添加参数<code>--standalone</code>。<code>--standalone</code>包含了参数<code>--follow-imports</code>。
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nuitka --mingw64 --standalone main.py</span><br></pre></td></tr></table></figure></p>
-<p>要打包成单个<code>.exe</code>文件，需要用到<code>--onefile</code>参数：
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nuitka --mingw64 --standalone --onefile main.py</span><br></pre></td></tr></table></figure></p>
-<p>程序中调用了某些模块时，需要用到<code>--enable-plugin=</code>参数调用插件。使用<code>nuitka --plugin-list</code>可以查看插件列表。例如，tkinter包有<code>--enable-plugin=tk-inter</code>，PySide6包有<code>--enable-plugin=pyside6</code>。<br />
-对于一个调用了PySide6的程序，就可以用如下命令打包： <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nuitka --mingw64 --standalone --onefile --enable-plugin=pyside6 --windows-disable-console main.py</span><br></pre></td></tr></table></figure>
-其中<code>--windows-disable-console</code>参数会隐藏Windows系统下的控制台。</p>
-<p>最后，<code>--show-progress</code>可以显示编译进度，<code>--show-memory</code>可以显示内存占用：
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nuitka --mingw64 --standalone --onefile --show-progress --show-memory --enable-plugin=pyside6 --windows-disable-console main.py</span><br></pre></td></tr></table></figure></p>
-<p>Nuitka还有一些常用参数：</p>
-<ul>
-<li><code>--include-data-dir=</code>：数据文件夹</li>
-<li><code>--output-dir=</code>：输出文件夹</li>
-<li><code>--windows-icon-from-ico=</code>：Windows下的图标</li>
-</ul>
+<p>形态学是最古老的语言学分支，最早的语法描述的正是形态。现存最早的语言学文献是约公元前2000年的苏美尔语词汇表，以楔形文字记录在泥板上。当时，作为古典语言，苏美尔语是两河流域通行的宗教、文学、科学语言，但是日常口语正在被没有亲缘关系的阿卡德语替换。因此，苏美尔语被作为外语教学。这些词汇表记录的就是苏美尔语词汇的各种形态。在古代印度、希腊和罗马的语法著作中，形态学也占有重要地位。<br />
+此后直到19世纪，西方语言学家都将语法基本等同于形态学，这可能是由于西方最重要的古典语言——拉丁语和希腊语都具有丰富的形态结构。直到1859年，德国语言学家奥古斯特·施莱谢尔（August
+Schleicher，1821—1868）引入「形态学」（Morphologie）一词，形态学才从语法中被剥离出来，成为一门独立的学科，得到与早已存在的音系学和句法学同等的地位。在这个意义上，形态学也可以认为是一门年轻的语言学分支。</p>
+<h1 id="词">词</h1>
+<p>形态学的研究对象是<strong>词（word）</strong>，然而语言学家对词却始终没有一个统一的定义。大多数人对词的认识来自于正字法，两个空格之间的字母序列就是一个词，即<strong>正字法词（orthographic
+word）</strong>。但是，正字法仅仅是一种书写的规范或习惯，因语言而异，甚至在同一语言中也会变化。例如，德语将复合词Handschuh（手套）连写，英语对于类似的复合词连写还是分写却没有统一的标准，hand
+shoe、hand-shoe、handshoe都有可能。此外，汉语完全不使用空格分词，朝鲜语直到20世纪采用谚文之后才使用空格分词，越南语国语字虽然使用空格，但是空格分隔的是单音节语素而非词。因此，基于正字法对词的定义并不可靠。</p>
+<p>从音系学出发，可以定义<strong>音系词（phonological
+word）</strong>。音系词是音步之上、音系短语之下的音系单位，一个音系词只有一个主重音，许多音系规则如元音和谐、连读变调等只应用于音系词内部，附着语素只能附着于音系词，许多语言还限制音系词的音节或音步的最小数量。音系词通常用字母ω表示。<br />
+为了识别音系词，可以计算主重音的数量或者判断音系规则的应用范围。例如，西班牙语的dámelo由三个语素组成，但是只有一个主重音（da），所以是一个音系词；同样连写的fácilmente由fácil-和-mente两个语素组成，并且具有两个主重音（fa、men），所以是两个音系词。音系词的边界在不同的变体中可能不同。例如，英语中像blackbird这样的复合词，在一些变体中只有一个主重音（black），可以分析为一个音系词；在另一些变体中则还有一个主重音（bird），可以分析为两个音系词。</p>
+<p>从形态学出发，可以定义<strong>词汇词（lexical
+word）</strong>，即<strong>词位（lexeme）</strong>。词位是构成母语者心理词典（即词库）以及书面词典的抽象单位，一个词位没有固定的音系形式，而是所有具有相同词汇意义和相同词类的屈折形式的集合。词位通常用小号大写字母表示。例如，对于英语词位<small>RUN</small>，run、runs、ran、running都是同一词位的不同形式。词位的其中一种形式会被选作该词位的规范形式，称为<strong>词目（lemma）</strong>，用作词典的词条。<small>RUN</small>的词目就是run。<br />
+为了识别词位，可以尝试能否替换相互替换不同形式而不改变它们在词典中所指向的词条。例如，英语的sing和sung都具有「唱」的含义且都属于动词，所以属于同一词位；而sing和song则属于不同词位，尽管两者来自同一词根。<br />
+由于意义和词类的不同，派生会改变词位。例如，sing（唱）和singer（歌手）就是通过派生相联系的两个词位。因此，屈折将一个词位与其不同形式联系起来，派生则将一个词位与另一个词位联系起来。</p>
+<p>从句法学出发，可以定义<strong>形态句法词（morphosyntactic
+word）</strong>或<strong>语法词（grammatical
+word）</strong>。形态句法词是一个词位与一组特定的形态句法特征的组合，即一个范式中的一个单位，形态句法词通过<strong>词形（wordform）</strong>实现为具体的语音形式。例如，西班牙语的canto
+[第一人称, 单数, 陈述式, 现在时]是一个形态句法词，cantaran [第三人称,
+复数, 虚拟式,
+过去时]则是另一个形态句法词，两者都属于同一词位<small>CANTAR</small>，词形分别是/ˈkanto/和/kanˈtaɾan/。<br />
+为了识别形态句法词，可以判断不同形式是否具有相同的形态句法特征。如果形态句法特征不同，即使属于同一词位，也是不同的形态句法词；如果语音形式也相同，则是由同一词形实现的不同形态句法词，即词形合并。例如，在两个西班牙语句子Yo
+cantaba ayer.和Él cantaba ayer.中，动词cantaba
+/kanˈtaba/词形完全相同，但是形态句法特征不同，前者是cantaba [第一人称,
+单数, 陈述式, 过去时, 未完成体]，后者是cantaba [第三人称, 单数, 陈述式,
+过去时, 未完成体]，两者是不同的形态句法词。<br />
+词位—形态语法词—词形这一三元对立最初由英国语言学家John
+Lyons（1932—2020）提出，并被英国语言学家Peter Hugoe
+Matthews（1934—2023）明确作为框架应用于《屈折形态学》（<em>Inflectional
+Morphology</em>）中：<strong>范式（paradigm）</strong>正是一个词位的所有形态句法词的集合，而实现规则则是将每个形态句法词分配至对应词形的规则。</p>
+<p>形态句法词与词位紧密相关，可以看作同一层次，而这一层次又与另外两个层次——音系词和正字法词相互独立，其中任意一个层次都无法确定其它两个层次。试比较以下西班牙语表达：</p>
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr>
+<th style="text-align: left;">表达</th>
+<th style="text-align: left;">正字法词</th>
+<th style="text-align: left;">音系词</th>
+<th style="text-align: left;">形态句法词</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">dar</td>
+<td style="text-align: left;">1个</td>
+<td style="text-align: left;">1个</td>
+<td
+style="text-align: left;">1个（词位<small>DAR</small>范式中的不定式单位）</td>
+</tr>
+<tr>
+<td style="text-align: left;">dámelo</td>
+<td style="text-align: left;">1个</td>
+<td style="text-align: left;">1个</td>
+<td style="text-align: left;">3个（1个动词+2个附着语素）</td>
+</tr>
+<tr>
+<td style="text-align: left;">voy a cantar<br />（迂回将来时）</td>
+<td style="text-align: left;">3个</td>
+<td style="text-align: left;">3个<br />2个（在快速口语中voy
+a连读时）</td>
+<td
+style="text-align: left;">1个（词位<small>CANTAR</small>范式中将来时的一个单位）</td>
+</tr>
+<tr>
+<td style="text-align: left;">he cantado</td>
+<td style="text-align: left;">2个</td>
+<td style="text-align: left;">2个</td>
+<td
+style="text-align: left;">1个（词位<small>CANTAR</small>范式中的现在完成时单位）</td>
+</tr>
+</tbody>
+</table>
+<h1 id="语素">语素</h1>
+<h2 id="传统形态学的语素">传统形态学的语素</h2>
+<p>词并非最小的语法单位。美国语言学家Leonard
+Bloomfield（1887—1949）在其1933年出版的教科书《语言》（<em>Language</em>）中，通过切分和成对比较的方法，得到了比词更小的语法单位。比较词语cat和cats或者work和worked，可以切分得到在许多词中重复出现的形式-s和-ed，它们分别具有复数和过去时的含义。Bloomfield将其命名为语素，并定义为无法再被分析为更小的具有意义的重复出现形式。不过，他认为语素在严格意义上是一种形式，即一段音位序列，而非一个形式与意义并存的抽象实体。为了避免心智主义，Bloomfield始终拒绝过多讨论语素对应的意义。换言之，<strong>语素（morpheme）</strong>是音义结合的最小单位，也是最小的语法单位。<br />
+虽然语素的标准定义由Bloomfield给出，但是在他之前就已有数位语言学家使用「语素」这一术语。波兰语言学家Jan
+Baudouin de
+Courtenay（1845—1929）在其关于斯拉夫语言的音系与形态的研究中首次使用「语素」（морфема,
+<em>morfema</em>）一词来指称词语中具有意义的最小单位，并将其与音位作为能够区别意义的最小的语音单位相类比。瑞士语言学家索绪尔（Ferdinand
+de
+Saussure，1857—1913）虽未使用「语素」一词，但他提出的「语言由能指和所指构成的符号系统」这一理论为形态学奠定了基础。随后，法国语言学家Antoine
+Meillet（1866—1936）使用的「语素」（morphème）一词已经相当接近现代含义，并且由此进入英语世界。</p>
+<p>Bloomfield开创了<strong>分布主义（distributionalism）</strong>，通过分析一个元素的分布——即该元素所有出现环境的集合，研究其对应的语言结构，因此分布主义也可以视为结构主义的一种。随后，美国语言学家Zellig
+Harris（1909—1992）在1951年的《结构语言学方法》（<em>Methods in
+Structural
+Linguistics</em>）中将语素也纳入分布主义框架：如果具有相同意义的不同形式处于互补分布，那么它们应当被视为同一语素。这与音系学中音位和音位变体的分析模式相同。<br />
+美国语言学家Charles F.
+Hockett（1916—2000）进一步引入了「形素」和「语素变体」两个术语，用来精确描述三个不同的形态学层次。Bloomfield则倾向于统一使用「语素」这一个术语来混淆这三个层次。</p>
+<ol type="1">
+<li><strong>形素（morph）</strong>：语素的具体实现，即某个特定词形中的语音形式，例如英语cats
+/kæts/中的音段/-s/、dogs /dɒgz/中的音段/-z/、horses
+/hɒː(r)sɪz/中的音段/-ɪz/</li>
+<li><strong>语素变体（allomorph）</strong>：一个语素可能实现的形素，即同一语素所有处于互补分布的形素，同样可以分为<strong>条件变体</strong>和<strong>自由变体</strong></li>
+<li><strong>语素（morpheme）</strong>：形素之上的一种抽象单位，即意义相同且处于互补分布的一组语素变体，例如英语复数语素{PL}的语素变体为/-s/、/-z/、/-ɪz/</li>
+</ol>
+<p>形素—语素变体—语素的三元对立完美对应了音素—音位变体—音位的关系。分布主义在语言的两个层次上都应用了相同的分析模式，这是项与排列模型能够作为一种形式上严谨的理论被提出的根本原因。因此，在这一理论中，morph、allomorph、morpheme对译为「形素」「语素变体」「语素」并不合理，为了与音系学对应，更合适的中文翻译应是「语素」「语位变体」「语位」。不过，出于习惯，下文仍将使用「形素」「语素变体」「语素」并在合适的地方加注括号。</p>
+<h2 id="对传统形态学的批评">对传统形态学的批评</h2>
+<p>Bloomfield–Hockett式的语素带有4条实质性的假设：</p>
+<ol type="1">
+<li><strong>双射性</strong>：每个语素对应一个意义，每个意义对应一个语素</li>
+<li><strong>可切分性</strong>：每个词都能被完美切分为若干连续的语素</li>
+<li><strong>同一性</strong>：意义相同且处于互补分布的不同形式必然属于同一语素</li>
+<li><strong>语义不变性</strong>：语素的意义在其所有语素变体中保持不变</li>
+</ol>
+<p>这4条假设都受到了系统的批评，而后来的理论形态学大部分都在回应这4条假设。</p>
+<h2 id="当代形态学的语素">当代形态学的语素</h2>
+<h1 id="实现关系">实现关系</h1>
 
     </div>
 
@@ -391,7 +481,7 @@ title="MinGW-w64">MinGW</a>。</p>
   </li>
   <li class="post-copyright-link">
       <strong>本文链接：</strong>
-      <a href="https://luckyfuy.top/2023/02/11/Nuitka-Usage/" title="Nuitka的简要使用">https://luckyfuy.top/2023/02/11/Nuitka-Usage/</a>
+      <a href="https://luckyfuy.top/2026/10/04/Morphology/" title="学习笔记·形态学">https://luckyfuy.top/2026/10/04/Morphology/</a>
   </li>
   <li class="post-copyright-license">
       <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
@@ -400,7 +490,7 @@ title="MinGW-w64">MinGW</a>。</p>
 </div>
 
           <div class="post-tags">
-              <a href="/tags/Python/" rel="tag"># Python</a>
+              <a href="/tags/Linguistics/" rel="tag"># Linguistics</a>
           </div>
 
         
@@ -420,14 +510,11 @@ title="MinGW-w64">MinGW</a>。</p>
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/2022/12/09/Limit/" rel="prev" title="学习笔记·极限论">
-                  <i class="fa fa-angle-left"></i> 学习笔记·极限论
+                <a href="/2026/09/10/Phonology/" rel="prev" title="学习笔记·音系学">
+                  <i class="fa fa-angle-left"></i> 学习笔记·音系学
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2023/03/11/Outline-of-Modern-Japanese-History/" rel="next" title="日本近代史纲要">
-                  日本近代史纲要 <i class="fa fa-angle-right"></i>
-                </a>
             </div>
           </div>
     </footer>
