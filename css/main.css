@@ -1334,7 +1334,7 @@ pre code {
     vertical-align: middle;
   }
   .links-of-author a::before {
-    background: #ff06ff;
+    background: #ff7f3e;
     display: inline-block;
     margin-right: 3px;
     transform: translateY(-2px);
@@ -2618,7 +2618,6 @@ mark.search-keyword {
   color: #ff2a2a;
   font-weight: bold;
 }
-mjx-container[jax='CHTML'][display='true'],
 .has-jax {
   overflow: auto hidden;
 }
