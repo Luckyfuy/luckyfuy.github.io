@@ -1,0 +1,1041 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#9370db"><meta name="generator" content="Hexo 8.1.1">
+<link rel="preconnect" href="https://fonts.googleapis.cn" crossorigin>
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon.ico">
+  <link rel="mask-icon" href="/images/favicon.svg" color="#9370db">
+  <link rel="manifest" href="/images/site.webmanifest">
+  <meta name="google-site-verification" content="I50azh-xtEyVuAVrVZHKk8hEXtVX9qeIIFuYWd9DYQM">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.googleapis.cn/css2?family=Fira+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Noto+Serif+SC:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Fira+Code:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.0.0/css/all.min.css" integrity="sha256-VHqXKFhhMxcpubYf9xiWdCiojEbY9NexQ4jh8AxbvcM=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/themes/purple/pace-theme-minimal.css">
+  <script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous" defer></script>
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"luckyfuy.top","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.29.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"base16/one-light","dark":"base16/onedark"},"prism":{"light":"prism","dark":"prism-dark"},"copy_button":{"enable":true,"style":"flat"},"fold":{"enable":false,"height":500},"language":false},"bookmark":{"enable":false,"color":"#222","save":"manual"},"mediumzoom":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索","empty":"没有找到任何搜索结果：${query}","hits_time":"找到${hits}个搜索结果（用时${time}毫秒）","hits":"找到${hits}个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"top_n_per_article":1,"unescape":true,"preload":true}}</script><script src="/js/config.js" defer></script>
+
+    <meta name="description" content="语音学（phonetics）是研究语音的自然属性的科学，包括其产生、传输、解码的过程。因此，语音学一般分为三个分支：发音语音学、声学语音学、听觉语音学。 语音学和音系学是两个相互独立而又密不可分的学科。语音学关注语音的自然属性，即语音自身所反映的生理、物理、心理属性；音系学则关注语音的社会属性，即语音在语言系统中的组织形式。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="学习笔记·语音学">
+<meta property="og:url" content="https://luckyfuy.top/el/2026/08/24/Phonetics/">
+<meta property="og:site_name" content="Luckyfuy&#39;s Blog">
+<meta property="og:description" content="语音学（phonetics）是研究语音的自然属性的科学，包括其产生、传输、解码的过程。因此，语音学一般分为三个分支：发音语音学、声学语音学、听觉语音学。 语音学和音系学是两个相互独立而又密不可分的学科。语音学关注语音的自然属性，即语音自身所反映的生理、物理、心理属性；音系学则关注语音的社会属性，即语音在语言系统中的组织形式。">
+<meta property="og:locale">
+<meta property="og:image" content="https://files.seeusercontent.com/2026/08/25/2Bad/ce5c470.png">
+<meta property="og:image" content="https://files.seeusercontent.com/2026/08/25/L5rk/33b8371.webp">
+<meta property="og:image" content="https://files.seeusercontent.com/2026/10/03/dg9U/5803678.png">
+<meta property="og:image" content="https://files.seeusercontent.com/2026/08/27/Sn1q/d63a997.png">
+<meta property="og:image" content="https://files.seeusercontent.com/2026/08/27/Ma6f/abd16c9.png">
+<meta property="og:image" content="https://files.seeusercontent.com/2026/08/27/sF3y/42c4b31.png">
+<meta property="og:image" content="https://files.seeusercontent.com/2026/08/27/4gpS/8dd9b42.png">
+<meta property="og:image" content="https://files.seeusercontent.com/2026/09/07/r5oI/4065f77.webp">
+<meta property="og:image" content="https://files.seeusercontent.com/2026/09/18/0gvM/72e7b8c.webp">
+<meta property="og:image" content="https://files.seeusercontent.com/2026/09/18/vPd7/ee72474.webp">
+<meta property="og:image" content="https://files.seeusercontent.com/2026/09/18/Bwf3/ddd5ccc.gif">
+<meta property="article:published_time" content="2026-08-24T20:41:28.000Z">
+<meta property="article:modified_time" content="2026-10-05T00:55:55.865Z">
+<meta property="article:author" content="Luckyfuy">
+<meta property="article:tag" content="Linguistics">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://files.seeusercontent.com/2026/08/25/2Bad/ce5c470.png">
+
+
+<link rel="canonical" href="https://luckyfuy.top/el/2026/08/24/Phonetics/">
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"el","comments":true,"permalink":"https://luckyfuy.top/2026/08/24/Phonetics/","path":"el/2026/08/24/Phonetics/","title":"学习笔记·语音学"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>学习笔记·语音学 | Luckyfuy's Blog</title>
+  
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-KZ6R08BNYM"></script>
+  <script class="next-config" data-name="google_analytics" type="application/json">{"tracking_id":"G-KZ6R08BNYM","only_pageview":false,"measure_protocol_api_secret":null}</script>
+  <script src="/js/third-party/analytics/google-analytics.js" defer></script>
+
+
+
+
+
+
+
+
+  
+  <script size="300" alpha="0.6" zIndex="-1" src="https://cdn.jsdelivr.net/npm/ribbon.js@1.0.2/dist/ribbon.min.js" defer></script>
+<script src="/js/utils.js" defer></script><script src="/js/motion.js" defer></script><script src="/js/sidebar.js" defer></script><script src="/js/next-boot.js" defer></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/hexo-generator-searchdb@1.5.0/dist/search.js" integrity="sha256-xFC6PJ82SL9b3WkGjFavNiA9gm5z6UBxWPiu4CYjptg=" crossorigin="anonymous" defer></script>
+<script src="/js/third-party/search/local-search.js" defer></script>
+
+
+
+
+
+  <script src="/js/third-party/pace.js" defer></script>
+
+  <script src="/js/third-party/addtoany.js" defer></script>
+
+  
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">true</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","display_overflow":"scroll","js":{"url":"https://cdn.jsdelivr.net/npm/mathjax@4.1.3/tex-mml-chtml.js","integrity":"sha256-ihPtDDm7pTmSF9ViEsItlvsrBTsNkz0MOXMchzOwCQw="}}</script>
+<script src="/js/third-party/math/mathjax.js" defer></script>
+
+
+
+    <link rel="stylesheet" href="https://fonts.googleapis.cn/css2?family=Noto+Serif+JP:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap&subset=latin,latin-ext">
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">Luckyfuy's Blog</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="Αναζήτηση" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Αρχική</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Ετικέτες</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Κατηγορίες</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Αρχεία</a></li><li class="menu-item menu-item-lab"><a href="/lab/" rel="section"><i class="fa fa-flask fa-fw"></i>Εργαστήριο</a></li><li class="menu-item menu-item-resource"><a href="/resource/" rel="section"><i class="fa fa-file fa-fw"></i>Πόροι</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Αναζήτηση
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+      <div class="search-header">
+        <span class="search-icon">
+          <i class="fa fa-search"></i>
+        </span>
+        <div class="search-input-container">
+          <input autocomplete="off" autocapitalize="off" maxlength="80"
+                placeholder="搜索" spellcheck="false"
+                type="search" class="search-input">
+        </div>
+        <span class="popup-btn-close" role="button">
+          <i class="fa fa-times-circle"></i>
+        </span>
+      </div>
+      <div class="search-result-container">
+        <div class="search-result-icon">
+          <i class="fa fa-spinner fa-pulse fa-5x"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%9F%B3%E6%AE%B5"><span class="nav-number">1.</span> <span class="nav-text">音段</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8F%91%E9%9F%B3%E8%AF%AD%E9%9F%B3%E5%AD%A6"><span class="nav-number">2.</span> <span class="nav-text">发音语音学</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%91%E9%9F%B3%E5%99%A8%E5%AE%98"><span class="nav-number">2.1.</span> <span class="nav-text">发音器官</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B0%94%E6%B5%81%E6%9C%BA%E5%88%B6"><span class="nav-number">2.2.</span> <span class="nav-text">气流机制</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%91%E5%A3%B0%E6%80%81"><span class="nav-number">2.3.</span> <span class="nav-text">发声态</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BE%85%E9%9F%B3"><span class="nav-number">2.4.</span> <span class="nav-text">辅音</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%B0%83%E9%9F%B3"><span class="nav-number">2.4.1.</span> <span class="nav-text">调音</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8F%91%E5%A3%B0"><span class="nav-number">2.4.2.</span> <span class="nav-text">发声</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B0%94%E6%B5%81"><span class="nav-number">2.4.3.</span> <span class="nav-text">气流</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8D%8F%E5%90%8C%E8%B0%83%E9%9F%B3"><span class="nav-number">2.4.4.</span> <span class="nav-text">协同调音</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%83%E9%9F%B3"><span class="nav-number">2.5.</span> <span class="nav-text">元音</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%BC%BB%E5%8C%96%E5%85%83%E9%9F%B3"><span class="nav-number">2.5.1.</span> <span class="nav-text">鼻化元音</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A4%8D%E5%85%83%E9%9F%B3"><span class="nav-number">2.5.2.</span> <span class="nav-text">复元音</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AF%AD%E9%9F%B3%E7%B1%BB"><span class="nav-number">2.6.</span> <span class="nav-text">语音类</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%A3%B0%E5%AD%A6%E8%AF%AD%E9%9F%B3%E5%AD%A6"><span class="nav-number">3.</span> <span class="nav-text">声学语音学</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A3%B0%E6%B3%A2"><span class="nav-number">3.1.</span> <span class="nav-text">声波</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B3%A2"><span class="nav-number">3.1.1.</span> <span class="nav-text">波</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A3%B0%E6%B3%A2-1"><span class="nav-number">3.1.2.</span> <span class="nav-text">声波</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AF%AD%E8%B0%B1%E5%9B%BE"><span class="nav-number">3.2.</span> <span class="nav-text">语谱图</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%9F%B5%E5%BE%8B"><span class="nav-number">3.3.</span> <span class="nav-text">韵律</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%90%AC%E8%A7%89%E8%AF%AD%E9%9F%B3%E5%AD%A6"><span class="nav-number">4.</span> <span class="nav-text">听觉语音学</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%BA%E8%80%B3"><span class="nav-number">4.1.</span> <span class="nav-text">人耳</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E4%B9%A6%E7%9B%AE"><span class="nav-number">5.</span> <span class="nav-text">参考书目</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Luckyfuy"
+      src="/images/hikari.jpg">
+  <p class="site-author-name" itemprop="name">Luckyfuy</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">48</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">5</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">21</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/Luckyfuy" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;Luckyfuy" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:mcluckyfuy@gmail.com" title="E-Mail → mailto:mcluckyfuy@gmail.com" rel="noopener me" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://zh.wikipedia.org/wiki/User:Luckyfuy" title="Wikipedia → https:&#x2F;&#x2F;zh.wikipedia.org&#x2F;wiki&#x2F;User:Luckyfuy" rel="noopener me" target="_blank"><i class="fab fa-wikipedia-w fa-fw"></i>Wikipedia</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://www.youtube.com/@luckyfuy" title="YouTube → https:&#x2F;&#x2F;www.youtube.com&#x2F;@luckyfuy" rel="noopener me" target="_blank"><i class="fab fa-youtube fa-fw"></i>YouTube</a>
+      </span>
+  </div>
+  <div class="cc-license animated" itemprop="license">
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans" class="cc-opacity" rel="noopener" target="_blank"><img src="https://cdn.jsdelivr.net/npm/@creativecommons/vocabulary@2020.11.3/assets/license_badges/small/by_nc_sa.svg" alt="Creative Commons"></a>
+  </div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="el">
+    <link itemprop="mainEntityOfPage" href="https://luckyfuy.top/2026/08/24/Phonetics/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/hikari.jpg">
+      <meta itemprop="name" content="Luckyfuy">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Luckyfuy's Blog">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="学习笔记·语音学 | Luckyfuy's Blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          学习笔记·语音学
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2026/08/24, Δευ 22:41:28" itemprop="dateCreated datePublished" datetime="2026-08-24T22:41:28+02:00">2026/08/24, Δευ</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E8%AF%AD%E8%A8%80%E5%AD%A6%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">语言学笔记</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Disqus：</span>
+    
+    <a title="disqus" href="/el/2026/08/24/Phonetics/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="el/2026/08/24/Phonetics/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>14k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>51 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><p><strong>语音学（phonetics）</strong>是研究语音的自然属性的科学，包括其产生、传输、解码的过程。因此，语音学一般分为三个分支：发音语音学、声学语音学、听觉语音学。<br />
+语音学和音系学是两个相互独立而又密不可分的学科。语音学关注语音的自然属性，即语音自身所反映的生理、物理、心理属性；音系学则关注语音的社会属性，即语音在语言系统中的组织形式。</p>
+<span id="more"></span>
+<h1 id="音段">音段</h1>
+<p><strong>语音（speech
+sound）</strong>是<strong>声音（sound）</strong>的一种，是用于言语的声音。声音由音高、音强、音长、音质四个要素组成，而在语音中，音质是最重要的要素，在区分语音时起到主要作用，其它三个要素则依附于音质。<br />
+声音是连续的，声音的四个要素会同时被我们感知到，但在处理语音时，我们可以首先将其切分为音质和非音质两部分。音质随时间而变化，我们因此将其进一步切分为若干个离散的语音单位，称为<strong>音段（segment）</strong>。音节是听觉上最容易分辨的音段，而音节往往还可以切分成更小的音段。最小的音段总是稳定不变的，是语音的基本单位，称为<strong>音素（phone）</strong>。音素是最小的语音单位。对于所有语言来说，可用的音素都是一样的。非音质包括音高、音强、音长三部分，依附于某一音段，称为<strong>超音段（suprasegment）</strong>。</p>
+<p>为了描述语音，必须制定一套符号系统用以记录音素，即<strong>音标（phonetic
+alphabet）</strong>。1888年，<a
+target="_blank" rel="noopener" href="https://www.internationalphoneticassociation.org/"
+title="International Phonetic Association">国际语音学学会（International
+Phonetic Association,
+IPA）</a>的前身基于拉丁字母制定了一套音标，经过多次修订，成为了使用最广泛的音标，称为<a
+target="_blank" rel="noopener" href="https://www.internationalphoneticassociation.org/IPAcharts/IPA_charts_TI/IPA_charts_TI.html#eng"
+title="The International Phonetic Alphabet"><strong>国际音标（International
+Phonetic Alphabet,
+IPA）</strong></a>。国际音标的一个字母就代表一个音素。<br />
+用国际音标记录语音的过程称为<strong>标音</strong>或<strong>转写（transcription）</strong>。根据转写的精度要求，可以分为<strong>宽式转写（broad
+transcription）</strong>和<strong>严式转写（narrow
+transcription）</strong>。宽式转写只记录最明显的语音特征，严式转写则更加精确，通过更多的附加符号来记录更多的细节，两种转写之间的区别是一种连续体。为了区分日常书写的字母，国际音标一般写在方括号[]内。</p>
+<figure>
+<img src="https://files.seeusercontent.com/2026/08/25/2Bad/ce5c470.png"
+title="国际音标表" alt="国际音标表" />
+<figcaption aria-hidden="true">国际音标表</figcaption>
+</figure>
+<p>然而，相同的音素在不同的语言中的作用可能不同。例如，汉语的不送气音[p]和送气音[pʰ]具有区分词的语音形式的作用：「标」[pjɑʊ]和「飘」[pʰjɑʊ]的区别仅仅在于辅音送气与否，两者却是不同的词。两个音素在其它的音都相同的环境下独立承担区分词的语音形式的作用，两者互换会改变意义，称为<strong>对立分布（contrastive
+distribution）</strong>。英语的[p]只出现在[s]后面，词首和其它位置都是[pʰ]，例如sport的p
+[p]和port的p
+[pʰ]，两者互换并不会引起混淆。两个音素在某一特定位置上只会出现其中一个，出现环境相互补充，两者互换不会改变意义，称为<strong>互补分布（complementary
+distribution）</strong>。[p]和[pʰ]在两种语言中的发音相同，作用却完全不同。</p>
+<p><strong>音位（phoneme）</strong>是能够区别意义的最小的语音单位，是音素之上的一种抽象单位。处于对立分布的不同音素必然属于不同音位，这是划分音位的主要依据。音素是音位的具体实现。国际音标表示音位时写在双斜线//内，即<strong>音位转写（phonemic
+transcription）</strong>，例如汉语的/p/和/pʰ/就是不同音位；表示音素时仍写在方括号[]内，即<strong>音素转写（phonetic
+transcription）</strong>。<br />
+处于互补分布的不同音素可以被归并为一个音位，互补的各音素称为该音位的<strong>音位变体（allophone）</strong>。例如，英语的[p]和[pʰ]是同一音位/p/的两个变体。不过，互补音素的归并还需要考虑到语音的相似。例如，普通话的[t]只出现在音节首，[ŋ]只出现在音节尾，属于互补分布。但是两者语音差别很大，所以应当分别设立音位。音位是语音相似且处于互补分布的一组音位变体。<br />
+上述音位均由音素构成，音素之间的差异在于音质，所以由音素构成的音位称为<strong>音质音位</strong>或<strong>音段音位（segmental
+phoneme）</strong>。除音质外，音高、音强、音长有时也能区别意义，从而构成音位，这些由超音段构成的音位称为<strong>非音质音位</strong>或<strong>超音段音位（suprasegmental
+phoneme）</strong>。例如，汉语的声调具有区分词的语音形式的作用，这就是由音高构成的音位。</p>
+<h1 id="发音语音学">发音语音学</h1>
+<p><strong>发音语音学（articulatory
+phonetics）</strong>研究人类产生语音的过程，关注的是语音所反映的生理属性。</p>
+<h2 id="发音器官">发音器官</h2>
+<p>人类的发音器官分为三大部分：动力（肺）、声源（声带）和共振腔（口腔、鼻腔、咽腔）。人类的发音也必须经过三个步骤：气流、发声、调音。<strong>气流（initiation）</strong>是肺所起的作用，<strong>发声（phonation）</strong>是声带所起的作用，<strong>调音（articulation）</strong>主要是口腔所起的作用。</p>
+<p><strong>肺（lung）</strong>是胸腔内的呼吸器官，有左右两个。肺本身不能扩张或收缩，需要依靠横膈膜和肋间肌活动。肋间外肌收缩使肋骨上升，同时横膈膜下降，胸腔因而扩大，肺随之扩张，此时压强低于大气压，外部的空气向内流入，即吸气；呼吸肌放松后，肺依靠弹性被动收缩，此时压强大于大气压，内部的空气向外流出，即呼气；剧烈呼气时，腹肌还会收缩使横膈膜上升，同时肋间内肌收缩使肋骨下降，胸腔因而缩小，肺随之快速收缩。<br />
+呼气时，空气自下而上会依次经过气管、喉腔、咽腔，最终从口腔或鼻腔流出，吸气时则相反。<strong>气管（trachea）</strong>由半环状软骨构成，上接喉部，下连肺部。气管上部到达声门，下部则分为两支气管连通左右两肺，在两肺内又形成无数树状分支，一直到达最末端的肺泡，与血管进行气体交换。两肺共有约2400
+km长的气管和3—5亿个肺泡。</p>
+<p><strong>喉（larynx）</strong>由环状软骨、杓状软骨、甲状软骨以及与其相连的肌肉和韧带组成。环状软骨位于喉的下部，与气管顶部相连；杓状软骨位于环状软骨后上方，分为左右两块；甲状软骨最大，分为左右两块，在喉的前部相连并略向前突，称为喉结，成年男性的喉结突出较明显。喉内的圆柱形空间称为<strong>喉腔（laryngeal
+cavity）</strong>，喉腔内有两对组织襞，上方的一对为前庭襞或称假声带，下方的一对为真声带。<br />
+<strong>声带（vocal
+cords）</strong>是喉腔内的两瓣组织襞，后侧附着于杓状软骨，前侧通过韧带与甲状软骨相连。成年男性的声带平均长度约为14
+mm，成年女性约为11
+mm。声带中间的通道称为声门裂，声门裂和声带统称<strong>声门（glottis）</strong>。声带可以左右分开或合拢：发浊音时，杓状软骨带动声带合拢，声门闭合，气流冲击声带使其发生振动，并在声门冲出较窄的通道；不发音或发清音时，杓状软骨带动声带分开，声门开放，气流可以自由通过，声带不振动。声带还可以绷紧或放松：发高音时，杓状软骨侧向转动，使得声带绷紧，振动频率增大，音高升高；发低音时，杓状软骨反向转动，使得声带放松，振动频率减小，音高降低。声门将喉腔分为两部分，下方为声门下腔，上方为喉前庭，喉前庭与咽腔、口腔、鼻腔共同组成了人类的<strong>声道（vocal
+tract）</strong>。成人男性的声道平均长度约为17 cm，成年女性约为14
+cm。</p>
+<p><img
+src="https://files.seeusercontent.com/2026/05/02/cg5V/115ab2d.png"
+title="喉" alt="喉" /> <img
+src="https://files.seeusercontent.com/2026/10/01/Beo0/c3cb0a2.webp"
+title="喉腔" alt="喉腔" /></p>
+<p><strong>口腔（oral
+cavity）</strong>是唇、腭、颊与口底之间的空间。口腔前部是嘴唇和牙齿，均分为上下两部分。口腔顶部主要是腭部，分为硬腭和软腭。硬腭前方与上齿之间的区域称为齿龈，中间有一条称作牙槽嵴的凸起，将齿龈分为齿龈前和齿龈后。腭部靠前的水平骨板称为硬腭，靠后的软组织则称为软腭。悬雍垂悬挂于软腭末端，又称小舌。<br />
+<strong>舌（tongue）</strong>位于口腔底部，是口腔中最重要的器官。舌的尖端称为舌尖；舌自然平伸时，与齿龈相对的部分称为舌叶；舌尖和舌叶统称舌冠。舌叶后方的部分是舌面，又称舌背，舌面前部与硬腭相对，舌面后部与软腭相对。舌背后方与咽腔相对的部分是舌根，舌根向前或向后运动可以使咽腔的空间扩大或缩小。<br />
+<strong>鼻腔（nasal
+cavity）</strong>是鼻子内部的空间，与鼻窦相通。鼻通过左右两个鼻孔与外界相通，并通过后部的两个鼻后孔与咽腔相通。<br />
+<strong>咽腔（pharynx）</strong>位于喉部上方，是口腔、鼻腔、喉腔和食管汇合的部位。咽喉之间有一块称作会厌的软骨。呼吸或说话时，会厌开放，气流可以自由通过喉腔；吞咽时，会厌闭合，食物或者液体进入食管，防止其进入喉腔。咽腔向上可以通到口腔或鼻腔：软腭下垂时，气流通入鼻腔；软腭抬起时，气流通入口腔。</p>
+<p>上述发音器官可以改变共振腔的形状，从而改变音质，称为<strong>调音部位（place
+of
+articulation）</strong>。唇、舌冠、舌背、舌根、声门可以主动活动，称为<strong>主动调音部位（active
+articulator）</strong>。齿、齿龈、硬腭、软腭、小舌、咽、会厌无法自由活动，称为<strong>被动调音部位（passive
+articulator）</strong>。调音的一般机制就是主动调音部位接近或触碰被动调音部位。<br />
+调音部位如图所示：（1.外唇、2.内唇、3.齿、4.齿龈、5.龈后、6.硬腭前、7.硬腭、8.软腭、9.小舌、10.咽、11.声门、12.会厌、13.舌根、14.舌面后、15.舌面前、16.舌叶、17.舌尖、18.舌尖下）</p>
+<figure>
+<img src="https://files.seeusercontent.com/2026/08/25/L5rk/33b8371.webp"
+title="调音部位" alt="调音部位" />
+<figcaption aria-hidden="true">调音部位</figcaption>
+</figure>
+<h2 id="气流机制">气流机制</h2>
+<p>所有语音都源于声道中的气流运动，即气流过程。产生气流的方式称为<strong>气流机制（airstream
+mechanism）</strong>。</p>
+<p>能够产生气流的器官称为<strong>气流动力器官（initiator）</strong>，人类的气流动力器官主要有三种：肺、声门、舌（软腭）。<br />
+肺作为气流动力器官时，依靠横膈膜和肋间肌呼出或吸入气流。<br />
+声门作为气流动力器官时，通过抬高或降低使得声道中的气压升高或降低，产生气流。声门作为唯一气流动力器官时，声带合拢，声门闭合，以此阻断肺部气流。<br />
+舌作为气流动力器官时，舌面后部或舌根抬高紧贴软腭或小舌，以此阻断肺部气流，同时舌冠或舌面前部紧贴软腭前方某一部位，形成密闭空间。由于参与这一过程的通常为软腭，因此往往也将软腭与舌共同视为气流动力器官。</p>
+<p>三种气流动力器官均可以通过升高或降低气压来向外呼出或向内吸入气流，分别产生<strong>外呼音（egressive）</strong>和<strong>内吸音（ingressive）</strong>。扩展国际音标分别用附加符号↑◌和◌↓表示。<br />
+3种气流动力器官和2种气流方向一共可以组成6种气流机制：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;"></th>
+<th style="text-align: left;">肺</th>
+<th style="text-align: left;">声门</th>
+<th style="text-align: left;">舌</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">外呼音</td>
+<td style="text-align: left;">肺外呼音（肺部气流音）</td>
+<td style="text-align: left;">声门外呼音（喷音）</td>
+<td style="text-align: left;">舌外呼音</td>
+</tr>
+<tr>
+<td style="text-align: right;">内吸音</td>
+<td style="text-align: left;">肺内吸音</td>
+<td style="text-align: left;">声门内吸音（内爆音）</td>
+<td style="text-align: left;">舌内吸音（啧音）</td>
+</tr>
+</tbody>
+</table>
+<p>在6种气流机制中，只有4种作为音位在人类语言中被发现，即肺外呼音、声门外呼音、声门内吸音、舌内吸音，但是其余2种气流机制在副语言中也有用到：</p>
+<ol type="1">
+<li><strong>肺外呼音</strong>即肺部气流音，是最常见的气流机制。所有人类语言都有肺外呼音，并且大多数语言只使用肺外呼音。</li>
+<li><strong>声门外呼音</strong>、<strong>声门内吸音</strong>、<strong>舌内吸音</strong>均为非肺部气流音，分别称为喷音、内爆音、啧音。</li>
+<li><strong>肺内吸音</strong>在副语言中较为常见，常用于表示同意。例如，瑞典语在回应表示肯定的ja时，往往使用内吸音，可以转写为[jɑː↓]；冰岛语甚至可以用内吸音说出一整个短语或句子，用于表达强烈的情感；汉语的「倒吸一口凉气」，有时写作拟声词「嘶」，也是吸气的擦音[s↓]，用于表达惊讶、紧张、恐惧等情感。此外，澳大利亚原住民仪式语言Damin语使用肺内吸音作为音位，但是这种语言已经灭绝。</li>
+<li><strong>舌外呼音</strong>较为罕见。法语表示不屑的副语言pff常用舌外呼音。此外，Damin语同样使用舌外呼音作为音位。</li>
+</ol>
+<h2 id="发声态">发声态</h2>
+<p>所有语音都依赖声带振动发声。在发声过程中，由于喉部的复杂结构，尤其是杓状软骨的灵活性，声门可以形成不同状态，包括不同的开口大小、不同的气流量、声带振动与否等，从而形成不同的<strong>发声态（phonation）</strong>。<br />
+发声态可以视为一个声门闭合程度的连续体，从闭合到开放依次有：</p>
+<ol type="1">
+<li><strong>塞声（closure）</strong>：声门完全闭合，气流无法通过，声带不振动，此时为声门爆发音[ʔ]。</li>
+<li><strong>嘎裂声（creaky voice）</strong>：又称<strong>气泡音（vocal
+fry）</strong>。杓状软骨向中间挤压，使得声带收紧，变得短而厚且僵硬，只有前部振动，气流较小，通常频率不规则且极低。国际音标用附加符号◌̰表示嘎裂声。哈尼语有松紧元音的对立，其中松元音为常态元音，紧元音即嘎裂声元音。此外，汉语普通话的第三声也附带嘎裂声。<br />
+嘎裂声和塞声之间有时会区分出<strong>糙声（harsh
+voice）</strong>，作为嘎裂声的强变体。发糙声时，喉腔收缩，假声带合拢挤压真声带，使得声门闭合，产生类似但不同于声门爆发音[ʔ]的语音。糙声常作为副语言用于愤怒。<br />
+英国语音学家Peter
+Ladefoged（1925—2006）还在嘎裂声和常态浊声之间区分出了<strong>僵声（stiff
+voice）</strong>，作为嘎裂声的弱变体。发僵声时，声门开口比常态浊声小，声带也更僵硬，但未达到嘎裂声的程度。国际音标没有表示僵声的符号，但是可以通过结合浊化符号◌̬与浊辅音符号表示。泰语的浊爆发音就是僵声，与清声和清送气声形成对立，例如บ้า
+<em>bâa</em> [b̬âː]（疯狂）—ป้า <em>bpâa</em> [pâː]（姑母，姨母）—ผ้า
+<em>pâa</em> [pʰâː]（布）。<br />
+僵声的音高较低，但在音节首时，有一种类似的发声态音高较高，听感较清脆，中国语音学家朱晓农（1952—）称为<strong>张声（tense
+voice）</strong>。发张声时，声门收缩，声道壁紧张，成阻部位后气压较高，持阻时间较长。发张声时，喉腔有时会扩张，并且容易变为内爆音。国际音标没有表示张声的符号，但是可以使用扩展国际音标的强发音符号◌͈表示。朝鲜语的紧辅音就是张声，其中的塞音与清声和清送气声形成对立，例如딸
+<em>ttal</em> [t͈al]（女儿）—달 <em>dal</em> [tal]（月）—탈 <em>tal</em>
+[tʰal]（面具）。吴语的全清爆发音也往往是张声。</li>
+<li><strong>常态浊声（modal
+voice）</strong>：杓状软骨合拢，声门微闭，声带规律振动。常态浊声是最平凡的发声态，大多数语言的元音以及其它响音都是常态浊声，阻音则往往通过常态浊声与清声形成对立。</li>
+<li><strong>清声（voicelessness）</strong>：杓状软骨分开，声门开放，声带不振动，气流较大。根据声门的开放程度，清声还可以进一步分为清不送气声、清送气声、零发声：<strong>清不送气声（unaspiration）</strong>声门开放程度较低但明显比常态浊声大，声门在除阻前最开；<strong>清送气声（aspiration）</strong>声门开放程度较大，声门在除阻时最开；<strong>零发声（zero）</strong>相当于呼气，声门开放程度最大，呈三角形。</li>
+</ol>
+<p>此外，还有两种常见发声态：</p>
+<ol start="5" type="1">
+<li><strong>耳语声（whispering）</strong>：声带基本合拢，但是杓状软骨分开，气流从杓状软骨处通过，声带不振动。耳语声没有音高，但是发耳语声时，声带之间仍有缝隙，会有微弱的气流摩擦通过。因此，用耳语声说话时，原来的浊声变为耳语声，但原来的清声仍为清声。耳语声在任何语言中都不作为音位存在，而是作为副语言表示私密的情感，所以国际音标没有表示耳语声的符号，但是有时会用附加符号◌̣表示。</li>
+<li><strong>假声（falsetto）</strong>：声带拉伸，变得长而薄，只有中间边缘振动，气流较小，频率极高。假声与假声带无关，发假声时，假声带高度分开。假声在副语言中常用于表示惊讶、兴奋等情感。在一些汉语方言中，假声具有音位作用。例如，粤语信宜话的名词小称调就是超高调，使用假声发音。</li>
+</ol>
+<p>根据声带振动与否，上述发声态可以分为带声和不带声。嘎裂声、常态浊声、假声声带振动，属于带声；塞声、清声、耳语声声带不振动，属于不带声。</p>
+<p>发声态可以相互组合，形成复合发声态。例如，清送气声可以与常态浊声组合成浊送气声，耳语声可以与常态浊声组合成耳语浊声。这两种复合发声态较为特殊，在一些语言中具有音位作用，统称为<strong>气声（breathy
+voice）</strong>：</p>
+<ol start="7" type="1">
+<li><strong>浊送气声（voiced
+aspiration）</strong>：声门开口比清送气声小、比弛声大，声带振动，气流较大。浊送气声主要表现在爆发音上，同时使后一元音气化，所以可以视为整个音节的性质。浊送气的一般为浊爆发音，清爆发音浊送气的现象罕见。国际音标用附加符号◌ʱ表示浊送气声。印地语是最典型的具有浊送气音位的语言，浊送气塞音与浊不送气、清送气、清不送气形成对立，例如धान
+<em>dhān</em> [dʱɑːn]（稻谷）—दान <em>dān</em> [dɑːn]（捐赠）—थान
+<em>thān</em> [tʰɑːn]（地方）—तान <em>tān</em> [tɑːn]（音调）。</li>
+<li><strong>弛声（slack
+voice）</strong>：即耳语浊声。声带部分合拢，开口比常态浊声大、比浊送气声小，杓状软骨分开，气流比浊送气声小，在使声带振动的同时一部分从杓状软骨处通过。弛声是整个音节的性质，主要表现在元音上，前一辅音为响音或浊爆发音时，也有弛化现象。弛声辅音音高较低，听感较闷软，发音时声道壁松弛，成阻部位后气压较低，持阻时间较短。弛声辅音一般为清爆发音，弛声浊爆发音罕见。国际音标用附加符号◌̤表示弛声，有时还用清化符号◌̥表示弛声清辅音。吴语的「清音浊流」实际上就是弛声清音，并与张声清不送气、清送气形成对立，例如上海话「败」[b̥a̤]—「摆」[p͈a]—「派」[pʰa]。朝鲜语的松辅音类似于弛声，但是气流更小。</li>
+</ol>
+<p>不同发声态的声门状态如图所示：（A.塞声、B.常态浊声、C.耳语声、D.气声、E.清声、F.清送气声）
+<img src="https://files.seeusercontent.com/2026/10/03/dg9U/5803678.png"
+title="发声态" alt="发声态" /></p>
+<h2 id="辅音">辅音</h2>
+<p>所有语言的音素都分为辅音和元音两类。</p>
+<h3 id="调音">调音</h3>
+<figure>
+<img src="https://files.seeusercontent.com/2026/08/27/Sn1q/d63a997.png"
+title="辅音（肺部气流音）" alt="辅音（肺部气流音）" />
+<figcaption aria-hidden="true">辅音（肺部气流音）</figcaption>
+</figure>
+<p><strong>辅音（consonant）</strong>是气流在口腔中受到阻碍而发出的音。在气流、发声、调音三个步骤中，调音是区分辅音最重要的过程。<br />
+发音时，气流受阻的部位就是调音部位。根据调音部位的不同，主要有以下辅音：</p>
+<ol type="1">
+<li><strong>唇音（labial）</strong>：
+<ol type="1">
+<li><strong>双唇音（bilabial）</strong>：下唇接触上唇，从而形成阻碍，如[p][ɸ][m]等。</li>
+<li><strong>唇齿音（labiodental）</strong>：下唇接触上齿，从而形成阻碍，如[f]等。</li>
+</ol></li>
+<li><strong>舌冠音（coronal）</strong>：
+<ol type="1">
+<li><strong>齿音（dental）</strong>：舌尖抵住上齿或抵在上下齿之间，从而形成阻碍，如[θ]等。舌尖抵在上下齿之间时也常称为<strong>齿间音（interdental）</strong>，[θ]就是齿间音。</li>
+<li><strong>龈音（alveolar）</strong>：舌尖或舌叶抵住或靠近齿龈，从而形成阻碍，如[t][s][n]等。</li>
+<li><strong>龈后音（postalveolar）</strong>：舌尖或舌叶抵住或靠近龈后，从而形成阻碍，如[ʃ]等。</li>
+<li><strong>卷舌音（retroflex）</strong>：舌尖向后卷起至硬腭（或龈后），从而形成阻碍，如[ʈ][ʂ][ɻ]等。</li>
+</ol></li>
+<li><strong>舌背音（dorsal）</strong>：
+<ol type="1">
+<li><strong>硬腭音（palatal）</strong>：舌面前部抬起抵住或靠近硬腭，从而形成阻碍，如[ç][ɲ][j]等。</li>
+<li><strong>软腭音（velar）</strong>：舌面后部抬起抵住或靠近软腭，从而形成阻碍，如[k][x][ŋ]等。</li>
+<li><strong>小舌音（uvular）</strong>：舌面后部抬起抵住或靠近小舌，从而形成阻碍，如[q][χ][ɴ]等。</li>
+</ol></li>
+<li><strong>喉音（laryngeal）</strong>：
+<ol type="1">
+<li><strong>咽音（pharyngeal）</strong>：舌根抵住咽部，从而形成阻碍，如[ħ]等。会厌阻塞产生的<strong>会厌音（epiglottal）</strong>也常归入咽音，如[ʡ]等，两者统称为<strong>舌根音（radical）</strong>。</li>
+<li><strong>声门音（glottal）</strong>：声门闭塞形成阻碍所产生的为声门爆发音[ʔ]；声门开放或部分开放使气流通过所产生的为声门擦音[h]等，[h]是唯一一个气流不受任何阻碍的辅音。</li>
+</ol></li>
+</ol>
+<p>形成辅音必须经过成阻、持阻、除阻三个阶段，气流经过这三个阶段的方式称为<strong>调音方式（manner
+of articulation）</strong>。根据调音方式的不同，主要有以下辅音：</p>
+<ol type="1">
+<li><strong>爆发音（plosive）</strong>：持阻阶段气流被调音部位完全阻塞，除阻阶段气流爆发冲出，如[p][t][k]等。如果除阻阶段没有听感，那么称该爆发音<strong>无闻除阻（no
+audible
+release）</strong>，国际音标用附加符号◌̚表示，例如粤语广府话的「八」[paːt̚]。爆发音经常被称作<strong>塞音（stop）</strong>，但广义上塞音还包括塞擦音和鼻塞音以及非肺部气流音。</li>
+<li><strong>擦音（fricative）</strong>：成阻阶段两个调音部位靠近形成狭窄通道，持阻阶段气流通过形成湍流发生摩擦，如[f][s][x]等。一部分擦音发音时，气流冲击牙齿边缘形成高频声音，称为<strong>咝音（sibilant）</strong>。</li>
+<li><strong>塞擦音（affricate）</strong>：成阻阶段调音部位完全阻塞声道，除阻阶段开放狭窄通道使气流通过并发生摩擦，先塞后擦，如[p̪f][ts][tɕ]等。塞擦音是一个由塞音成分和擦音成分紧密结合成的单辅音，而非由一个塞音和一个擦音组合成的辅音组合，所以其音标有时用连接线相连，如[p̪͡f][t͡s][t͡ɕ]等。塞擦音的塞音成分和擦音成分通常调音部位相同。</li>
+<li><strong>颤音（trill）</strong>：气流冲击调音部位使其快速颤动，如[ʙ][r][ʀ]等。由于振动使得声道连续地快速闭合和开放，颤音如同一连串较弱的爆发音。</li>
+<li><strong>拍音（tap）</strong>与<strong>闪音（flap）</strong>：肌肉收缩使得一个调音部位接触一次另一个调音部位，如[ⱱ][ɾ][ɽ]等。拍音和闪音的区别在于，拍音的主动调音部位的运动方向垂直于被动调音部位，闪音的主动调音部位的运动方向平行于被动调音部位，例如[ɾ]通常为拍音，[ɽ]通常为闪音。</li>
+<li><strong>近音（approximant）</strong>：调音部位相互靠近，但未狭窄到足以形成湍流，介于作为辅音的擦音和元音之间。一部分近音在语音上与元音类似，但是无法充当音节核，称为<strong>半元音（semivowel）</strong>或<strong>滑音（glide）</strong>，例如四个基本元音[i][y][ɯ][u]分别所对应的半元音[j][ɥ][ɰ][w]。非半元音的常见非边近音有[ʋ][ɹ][ɻ]等。</li>
+<li><strong>边音（lateral）</strong>：气流被舌阻挡无法从口腔中央通过，只能从舌的一侧或两侧通过。最常见的边音是<strong>边近音（lateral
+approximant）</strong>，即同时为近音的边音，如[l][ɭ][ʎ]等。此外还有边擦音、边塞擦音、边拍音／闪音等。边音往往被描述为「类l音」，与「类r音」即<strong>r色彩辅音（rhotic）</strong>统称为<strong>流音（liquid）</strong>。</li>
+</ol>
+<p>上述不同调音方式的辅音的共振腔均为口腔，称为<strong>口音（oral）</strong>。软腭下垂，阻塞口腔，使气流从鼻腔通过，就会产生<strong>鼻音（nasal）</strong>，如[m][n][ŋ]等。由于口腔被完全阻塞，绝大多数鼻音都是塞音，称为<strong>鼻塞音（nasal
+stop）</strong>。</p>
+<h3 id="发声">发声</h3>
+<p>在发声过程中，辅音会受到<strong>发声态（phonation）</strong>的影响。</p>
+<p>根据声带振动与否，辅音可以分为浊音和清音。声门微闭，声带振动，辅音带声，称为<strong>浊音（voiced）</strong>，此时发声态为常态浊声；声门开放，声带不振动，辅音不带声，称为<strong>清音（voiceless）</strong>，此时发声态为清声。例如，清音[p][t][k][f][s]所对应的浊音分别是[b][d][g][v][z]。<br />
+大多数语言的阻音都有清浊对立，例如西班牙语par（一对）—bar（酒吧，小餐馆）。汉语普通话没有清浊对立，但是闽南语、吴语、湘语等方言有清浊对立，例如湘语双峰话「巴」[po]—「爬」[bo]。<br />
+鼻音、边音等响音一般为浊音，如果发音时声带不振动，就是清鼻音、清边音等。国际音标用附加符号◌̥表示清化，例如浊音[m][n][l]所对应的清音为[m̥][n̥][l̥]。许多东南亚语言都有清浊响音的对立，例如缅甸语မ
+[ma]（抬起，举起）—မှ [m̥a]（从）、နတ် [naʔ]（缅甸神灵）—နှတ်
+[n̥aʔ]（纺织机的综丝）、လေး [le]（四）—လှေး [l̥e]（跳蚤）。</p>
+<p>根据声带闭合时间，辅音又可以分为送气音和不送气音。由于发清音时声门开放，如果后接元音，声门必须闭合以便振动。辅音除阻后，声带隔一段时间才闭合，此时为<strong>送气音（aspirated）</strong>；声带立刻闭合，此时为<strong>不送气音（unaspirated）</strong>。辅音除阻后的气流大部分来自咽腔或声门，所以国际音标用上标的声门擦音◌ʰ表示送气，例如不送气音[p]所对应的送气音为[pʰ]；此外，一些过时的汉语言著作会使用◌ʻ来表示送气，例如[pʻ]。不过，如果辅音的调音部位靠前，后一元音的舌位也靠前，那么送气气流的部位就与辅音调音部位相同，例如[tsʰi][tɕʰi][ʈʂʰʅ]的送气气流就与同部位擦音一致。<br />
+由于只有爆发音和塞擦音有典型的除阻阶段，大多数送气音都是爆发音和塞擦音。不过，少数语言也有送气清擦音，这种送气往往伴随着喉部摩擦，与后面的元音同时发出。例如，黔东苗语台江方言的清擦音就有送气与不送气的对立，例如[fa]（瓜）—[fʰa]（搓）、[so]（花椒）—[sʰo]（消失）、[ɕi]（纸）—[ɕʰi]（尝）。<br />
+送气音一般为清音。汉语普通话的清音有送气与不送气的对立，例如「罢」[pa]—「怕」[pʰa]。送气浊辅音较为少见，送气气流为浊气流，所以国际音标用上标的声门浊擦音◌ʱ表示浊送气。佤语的浊音有送气与不送气的对立，甚至响音和浊擦音也有相应的对立，例如[da]（晒）—[dʱa]（预先）、[la]（竹子）—[lʱa]（迟）、[va]（宽）—[vʱak]（挂）。</p>
+<p>通过调音部位、调音方式、清浊和送气，我们已经能够描述一个辅音。描述辅音的推荐顺序是<em>调音部位+（送气）+清浊+调音方式</em>，例如，[t]是一个龈不送气清爆发音。</p>
+<h3 id="气流">气流</h3>
+<figure>
+<img src="https://files.seeusercontent.com/2026/08/27/Ma6f/abd16c9.png"
+title="辅音（非肺部气流音）" alt="辅音（非肺部气流音）" />
+<figcaption aria-hidden="true">辅音（非肺部气流音）</figcaption>
+</figure>
+<p>在气流过程中，上述辅音均由肺部向外呼出气流产生，称为<strong>肺部气流音（pulmonic
+consonant）</strong>。此外，还有三种不以肺部作为气流动力器官的<strong>非肺部气流音（non-pulmonic
+consonant）</strong>：</p>
+<ul>
+<li><strong>啧音（click）</strong>：即舌内吸音。口腔内前后两个调音部位同时阻塞，其中后一调音部位为软腭或小舌，除阻阶段舌头吮吸两个调音部位之间的密闭空间形成负压，吸入气流产生声音。啧音作为音素主要出现在南部非洲的语言中。此外，汉语表示厌恶的副语言「啧」和英语表示不赞同的副语言tsk/tut都是齿啧音[ǀ]。</li>
+<li><strong>内爆音（implosive）</strong>：即声门内吸音。在爆发音的持阻阶段，先降低声门减小气压，后除阻气流吸入产生声音。由于发音过程中声门难以完全闭合，除阻阶段往往会同时从肺部呼出空气，因此绝大多数内爆音都是浊音。国际音标通过在浊爆发音音标的顶部添加一个向右的钩来表示浊内爆音，例如双唇浊内爆音[ɓ]。内爆音分布较广，在漠南非洲、东南亚以及亚马孙流域的语言中均有出现。一些汉语方言如吴语、粤语、闽语等也有浊内爆音，例如琼雷语文昌话有呼气爆发音与浊内爆音的对立：「磨」[bo]—「波」[ɓo]。</li>
+<li><strong>喷音（ejective）</strong>：即声门外呼音。在清辅音的持阻阶段，先抬高声门增大气压，后除阻气流爆发产生声音。由于发音过程中声门闭合，喷音不可能为浊音。国际音标用附加符号◌ʼ来表示喷音，例如软腭喷音[kʼ]。喷音作为音素主要出现在高加索地区、东非大裂谷、南非高原、美洲科迪勒拉山系的语言中。</li>
+</ul>
+<h3 id="协同调音">协同调音</h3>
+<figure>
+<img src="https://files.seeusercontent.com/2026/08/27/sF3y/42c4b31.png"
+title="辅音（协同调音）" alt="辅音（协同调音）" />
+<figcaption aria-hidden="true">辅音（协同调音）</figcaption>
+</figure>
+<p>有的辅音同时具有两个被动调音部位，称为<strong>协同调音辅音（co-articulated
+consonant）</strong>。<br />
+两个调音方式也相同时，称为<strong>双重调音辅音（doubly articulated
+consonant）</strong>，国际音标用连接线相连，例如唇-软腭清爆发音[k͡p]。<br />
+两个调音方式不同时，称为<strong>次要调音辅音（consonant with secondary
+articulation）</strong>，国际音标用附加符号表示。次要调音有<strong>唇化（labialization）</strong>、<strong>腭化（palatalization）</strong>、<strong>软腭化（velarization）</strong>、<strong>咽化（pharyngealization）</strong>等，国际音标分别用◌ʷ、◌ʲ、◌ˠ、◌ˤ表示。例如，英语中的辅音r为唇化龈后浊近音[ɹ̠ʷ]，许多斯拉夫语言中的软辅音[tʲ][nʲ][rʲ]等均为腭化辅音，英语中辅音l位于音节尾的变体（dark
+l）为软腭化龈浊边音[lˠ]，阿拉伯语中的强势辅音（顶音）[sˤ][dˤ][tˤ][ðˤ]等均为咽化辅音。<br />
+有的协同调音辅音有专门的音标表示，例如唇-软腭浊近音[w]。[w]也可以写成[ɰʷ]，所以这类协同调音往往难以判断属于双重调音还是次要调音。</p>
+<h2 id="元音">元音</h2>
+<figure>
+<img src="https://files.seeusercontent.com/2026/08/27/4gpS/8dd9b42.png"
+title="元音" alt="元音" />
+<figcaption aria-hidden="true">元音</figcaption>
+</figure>
+<p><strong>元音（vowel）</strong>是气流在口腔中没有受到阻碍发出的音。<br />
+元音的音质取决于共振腔的形状，而共振腔的形状主要由唇和舌决定。因此，元音主要根据舌位的前后高低以及唇的圆展来分类。绝大部分元音发音时，舌面抬高或降低，所以称为<strong>舌面元音（dorsal
+vowel）</strong>。<br />
+舌位高低决定了<strong>元音高度（vowel
+height）</strong>。同时，由于舌与下颌相连，舌位高低也等价于颌的开闭。因此，高或低也可以称为闭或开。国际音标一共定义了7种元音高度，从高到低依次为闭（高）、次闭（次高）、半闭（中高）、中、半开（中低）、次开（次低）、开（低）。通常，闭和次闭元音统称为<strong>闭元音（close
+vowel）</strong>或<strong>高元音（high
+vowel）</strong>，半闭、中、半高元音统称为<strong>中元音（mid
+vowel）</strong>，开和次开元音统称为<strong>开元音（open
+vowel）</strong>或<strong>低元音（low vowel）</strong>。<br />
+舌位前后决定了<strong>元音前后（vowel
+backness）</strong>。国际音标一共定义了5种元音前后，从前到后依次为前、次前、央、次后、后。通常，前和次前元音统称为<strong>前元音（front
+vowel）</strong>，后和次后元音统称为<strong>后元音（back
+vowel）</strong>，中间为<strong>央元音（central vowel）</strong>。
+唇的圆展决定了<strong>元音圆唇度（vowel
+roundedness）</strong>。发音时，嘴唇撮圆的元音称为<strong>圆唇元音（rounded
+vowel）</strong>，嘴唇展平的元音称为<strong>不圆唇元音（unrounded
+vowel）</strong>。不圆唇元音的舌位通常比圆唇元音靠前：前圆唇元音比前不圆唇元音更央，后不圆唇元音则比后圆唇元音更央。在大多数语言中，前元音往往不圆唇，后元音往往圆唇。</p>
+<p>通过舌位的高低和前后以及唇的圆展，我们能够描述一个基本元音。描述元音的推荐顺序是<em>高低+前后+圆唇／不圆唇</em>，例如，[ɛ]是一个半开前不圆唇元音。<br />
+在舌位最高最前、最高最后、最低最前、最低最后的四个极端位置，我们可以确定四个参考元音：闭前不圆唇元音[i]、闭后圆唇元音[u]、开前不圆唇元音[a]、开后不圆唇元音[ɑ]。将这四个参考元音作为顶点用线相连，可以形成一个四边形，简化后得到国际音标的元音梯形图，所有舌面元音都在梯形内。<br />
+元音梯形图左边的线上是前元音，将这条线从[i]到[a]三等分，分别可以得到半闭元音和半开元音。如果嘴唇都展平，就是半闭前不圆唇元音[e]和半开前不圆唇元音[ɛ]。其中，音标[e]也常用于表示中前不圆唇元音[e̞]，一些过时的汉语言著作也用[ᴇ]表示中前不圆唇元音。元音梯形图右边的线上是后元音，将这条线也三等分，如果嘴唇都撮圆，就能得到半闭后圆唇元音[o]和半开后圆唇元音[ɔ]。其中，音标[o]也常用于表示中后圆唇元音[o̞]。<br />
+在前元音和后元音中间连一条线，可以得到央元音。闭前元音[i]和闭后元音[u]的中点是闭央元音[ɨ]和[ʉ]，开前元音[a]和开后元音[ɑ]的中点则是开央元音[ä]。音标[a]也常用于表示开央不圆唇元音[o̞]，一些汉语言著作也用[ᴀ]表示同一元音。位于元音梯形图中心的是中央元音[ə]，其舌位不高不低、不前不后，放松口腔即可发出。因此，[ə]一般是弱化元音，称为<strong>schwa</strong>。</p>
+<p>一些语言——主要是日耳曼语言——中，元音还区分<strong>松紧（tenseness）</strong>。<strong>紧元音（tense
+vowel）</strong>通常肌肉收缩程度大于<strong>松元音（lax
+vowel）</strong>，相对来说更少央化、时长更长甚至舌位更高。通常，闭、半闭、次开元音为紧元音，次闭、半开、开元音为对应的松元音。例如，美式英语中的紧元音[i][u][e][o]分别对应松元音[ɪ][ʊ][ɛ][ɔ]。</p>
+<p>元音发音时，如果发生卷舌，舌尖向上卷起，还会产生<strong>r色彩元音（r-colored/rhotic
+vowel）</strong>。国际音标用附加符号◌˞表示r色彩，例如元音[ə]所对应的r色彩元音为[ɚ]。</p>
+<p>汉语言学界一般认为，除舌面元音外，还有主动调音部位为舌尖或舌尖下的<strong>舌尖元音（apical
+vowel）</strong>，例如普通话「资」[tsɿ]中的舌尖前音[ɿ]和「知」[ʈʂʅ]中的舌尖后音[ʅ]。不过，舌尖元音一般被视为音节性的辅音，舌尖前音为音节性龈近音[ɹ̩]，舌尖后音为音节性卷舌近音[ɻ̍]。</p>
+<h3 id="鼻化元音">鼻化元音</h3>
+<p>上述元音的共振腔均为口腔，称为<strong>口元音（oral
+vowel）</strong>。软腭下垂，使气流同时从鼻腔和口腔通过，就会产生<strong>鼻元音（nasal
+vowel）</strong>。许多鼻元音都是由口元音受到邻近鼻辅音同化影响而形成，这个过程称为<strong>鼻化（nasalization）</strong>。国际音标用附加符号◌̃表示鼻化，例如口元音[ɑ]所对应的鼻元音为[ɑ̃]。</p>
+<h3 id="复元音">复元音</h3>
+<p>元音发音时，如果音质保持不变，那么称为<strong>单元音（monophthong）</strong>；如果音质发生变化，从一个元音滑向另一个甚至更多元音，就会产生<strong>双元音（diphthong）</strong>或<strong>三元音（triphthong）</strong>。例如，汉语的复韵母可以被分析为双元音和三元音，普通话「啊」[a]、「压」[i̯a]、「妖」[i̯ɑʊ̯]的韵母就分别可以视为单元音、双元音、三元音。</p>
+<h2 id="语音类">语音类</h2>
+<p>所有音素都可以分为辅音和元音两类，而辅音又可以分为清音和浊音两类，元音又可以分为圆唇音和不圆唇音两类。这些分类方式将音素划分为若干<strong>语音类（sound
+class）</strong>，除此以外，还有许多一般的语音类。</p>
+<p>一些音素在发音时声道没有受到阻塞，包括擦音、流音和滑音以及所有元音，称为<strong>通音（continuant）</strong>。通音之外的辅音——包括爆发音、塞擦音、鼻塞音——则称为<strong>阻塞音（occlusive）</strong>。<br />
+一些音素在发音时气流没有受到阻碍，包括鼻音、流音和滑音以及所有元音，称为<strong>响音（sonorant）</strong>。响音之外的辅音——包括爆发音、塞擦音、擦音——则称为<strong>阻音（obstruent）</strong>。响音一般为浊音。<br />
+<strong>近音</strong>包括滑音和大部分流音，而广义上的近音还包括元音，称为<strong>非擦通音（frictionless
+continuant）</strong>。非近音则包括阻音和鼻音。<br />
+所有音素都分为辅音和元音，但并不是所有的辅音都有相同的地位。一些辅音的辅音性弱，接近元音，例如滑音。因此，滑音和元音称为<strong>类元音（vocoid）</strong>。滑音之外的辅音则称为<strong>类辅音（contoid）</strong>，包括阻音、鼻音、流音。类辅音可以进一步根据发音部位分为<strong>唇音</strong>、<strong>舌冠音</strong>、<strong>舌背音</strong>、<strong>喉音</strong>（<strong>舌根音</strong>、<strong>声门音</strong>）等，类元音则始终为舌背音。<br />
+一些音素可以充当音节核，具有<strong>音节性（syllabic）</strong>。元音显然具有音节性，类辅音和滑音则一般不具有音节性。但是，鼻音和流音有时也能充当音节核，成为音节性辅音，国际音标用附加符号◌̩表示，例如英语中常见音节性的[m][n][l][ɹ]——[m̩][n̩][l̩][ɹ̩]。阻音和滑音始终不能充当音节核。</p>
+<figure>
+<img src="https://files.seeusercontent.com/2026/09/07/r5oI/4065f77.webp"
+title="语音类" alt="语音类" />
+<figcaption aria-hidden="true">语音类</figcaption>
+</figure>
+<h1 id="声学语音学">声学语音学</h1>
+<p><strong>声学语音学（acoustic
+phonetics）</strong>研究语音的声学性质，关注的是语音所反映的物理属性。</p>
+<h2 id="声波">声波</h2>
+<p>语音是声音的一种，物理形式是声波。</p>
+<h3 id="波">波</h3>
+<p><strong>波（wave）</strong>是一种扰动，最基本的波具有周期性。从无线电波、微波、光波到声波、水波、地震波乃至单摆和弹簧的运动，波无处不在。<br />
+大部分波都需要通过<strong>介质（medium）</strong>传播，不能通过真空传播，称为<strong>机械波（mechanical
+wave）</strong>。例如，声波的介质通常是空气，水波的介质是水，弹簧运动的介质则是弹簧本身。介质可以视为一系列连续的<strong>质点（particle）</strong>，质点间的相互作用使得扰动能够传播。波产生时，对第一个质点做功，使之发生位移，而第一个质点又对第二个质点做功，每个质点依此推动相邻质点，从而在介质中将扰动传播到远处。这种位移是暂时的，每个质点都只会位移有限的距离并复原。例如，弹簧的运动可以视为一系列连续的环相互推动，每一个环受到扰动后推动下一个环，随后回复原位。因此，波不传递物质，波只传递能量。</p>
+<figure>
+<img src="https://files.seeusercontent.com/2026/09/18/0gvM/72e7b8c.webp"
+title="波峰与波谷" alt="波峰与波谷" />
+<figcaption aria-hidden="true">波峰与波谷</figcaption>
+</figure>
+<p>根据介质中质点运动方向相对于波的传播方向的关系，机械波可以分为两种：<strong>横波（transverse
+wave）</strong>是质点运动方向垂直于传播方向的波，<strong>纵波（longitudinal
+wave）</strong>是质点运动方向平行于传播方向的波。在固体介质中传播的波可以是横波也可以是纵波，在流体（气体或液体）介质中传播的波只能是纵波。例如，地震可以同时产生两种波，其中P波是纵波，S波是横波，只有P波能穿过液态的地核。<br />
+将弹簧拉长，左右或上下晃动就能产生横波。此时，弹簧会形成一条曲线。曲线的最高点，即介质中相对静止位置位移最大的质点，称为<strong>波峰（crest）</strong>；曲线的最低点，即介质中相对静止位置位移最小的质点，称为<strong>波谷（trough）</strong>。介质中相对静止位置的最大距离，即波峰或波谷相对静止位置的距离，称为<strong>振幅（amplitude）</strong>。波在一个周期内的长度称为<strong>波长（wavelength）</strong>，即波上相邻两个对应的点之间的距离，例如波峰与波峰或波谷与波谷之间的距离。振幅通常用字母<span
+class="math inline">\(A\)</span>表示，波长通常用字母<span
+class="math inline">\(\lambda\)</span>表示，单位都是米（m）。<br />
+将弹簧拉长，前后推拉就能产生纵波。此时，弹簧中会形成交替前移的密部和疏部，密部的环距离较小，疏部的环距离较大。密部是介质中密度最大的质点，是纵波的波峰；疏部是介质中密度最小的点，是纵波的波谷。纵波是密部和疏部交替出现的序列，所以又称<strong>疏密波（compression
+wave）</strong>。同时，由于纵波会造成介质中压力的变化，所以又称<strong>压力波（pressure
+wave）</strong>。</p>
+<p>波的<strong>周期（period）</strong>是介质中的一个质点完成一次振动所需的时间，通常用字母<span
+class="math inline">\(T\)</span>表示，单位为秒（s）。波的<strong>频率（frequency）</strong>则是单位时间内介质中的一个质点完成振动的周期数，是周期的倒数，通常用字母<span
+class="math inline">\(f\)</span>表示，单位为赫兹（hertz,
+Hz）。赫兹以第一个证实电磁波存在的德国物理学家海因里希·赫兹（Heinrich
+Hertz，1857—1894）命名，1赫兹表示每秒1个周期，即1 Hz = 1
+s⁻¹。频率和周期的数学关系如下： <span
+class="math display">\[\begin{align}
+&amp; f = \dfrac{1}{T} \\
+&amp; T = \dfrac{1}{f}
+\end{align}\]</span> <strong>波速（wave
+velocity）</strong>是波传播的速度，通常用字母<span
+class="math inline">\(v\)</span>表示，单位为米每秒（m/s）。在数学上，波速可以通过波长和频率计算：
+<span class="math display">\[v = \dfrac{\lambda}{T} = \lambda f\]</span>
+但是在物理上，波速由介质决定，而波长再由波速和频率共同决定。其它条件相同时，介质密度越小，波速越快，波长越长。</p>
+<p>波从一种介质进入另一种介质时，会发生<strong>折射（refraction）</strong>，改变波速并偏转方向，频率则保持不变。同时，波在介质界面会发生<strong>反射（reflection）</strong>，返回同一介质，所以反射波波速保持不变。入射波在介质界面反射和折射时，会经历能量再分配，反射波只有入射波的一部分能量，所以反射波的振幅始终小于入射波。</p>
+<figure>
+<img src="https://files.seeusercontent.com/2026/09/18/vPd7/ee72474.webp"
+title="波的干涉" alt="波的干涉" />
+<figcaption aria-hidden="true">波的干涉</figcaption>
+</figure>
+<p>当两列波在同一介质中相遇时，传播不受影响，但会发生叠加，称为波的<strong>干涉（interference）</strong>，介质中重叠的各质点位移等于两者产生位移的矢量和。如果两列频率相同的波的波峰与波峰或波谷与波谷在同一点相遇，那么合成振幅等于两者振幅之和，即<strong>相长干涉（constructive
+interference）</strong>；如果两列频率相同的波的波峰与波谷在同一点相遇，那么合成振幅等于两者振幅之差，即<strong>相消干涉（destructive
+interference）</strong>。</p>
+<figure>
+<img src="https://files.seeusercontent.com/2026/09/18/Bwf3/ddd5ccc.gif"
+title="由传播方向相反的两列波（蓝、绿）叠加而成的驻波（红）"
+alt="由传播方向相反的两列波（蓝、绿）叠加而成的驻波（红）" />
+<figcaption
+aria-hidden="true">由传播方向相反的两列波（蓝、绿）叠加而成的驻波（红）</figcaption>
+</figure>
+<p>当两列相同的波沿相反方向传播时，相互干涉，就会形成<strong>驻波（standing
+wave）</strong>。在驻波中，介质中一些质点的位移始终为零，称为<strong>节点（node）</strong>，两列波在节点处发生相消干涉；介质中一些质点的振幅最大，称为<strong>腹点（antinode）</strong>，两列波在节点处发生相长干涉。</p>
+<h3 id="声波-1">声波</h3>
+<p><strong>声波（acoustic
+wave）</strong>由物体振动产生并通过介质传播，是一种机械波。振动发声的物体称为<strong>声源（sound
+source）</strong>。如果声源受到初始的外力作用而自行振动发声，那么称该声源<strong>自由振动（free
+vibration）</strong>或<strong>自然振动（natural
+vibration）</strong>；如果声源受到周期性的外力持续作用而振动发声，那么称该声源<strong>受迫振动（forced
+vibration）</strong>。声波的介质通常是空气。声波的波速称为<strong>声速（speech
+of sound）</strong>或<strong>音速</strong>，20°C时空气中的声速约为343
+m/s。<br />
+声波是纵波，会在介质中形成交替的密部和疏部。在人耳内，声波的压力变化可以使鼓膜振动，转化为机械运动传入中耳，人类因此能够感知不同频率的声音。声波到达鼓膜时，密部使得外部压强增大，大于内部压强，引发鼓膜向内移动；疏部则使得外部压强减小，小于内部压强，引发鼓膜向外移动，由此引发鼓膜振动。</p>
+<p>声音有四大特性：音高、音强、音长、音质。与之对应，声波在物理上也有四大特性：频率、声强、时长、频谱。</p>
+<p>声波的<strong>频率</strong>可以被耳感知到。人类听觉能够感知到的声音频率范围一般为20—20,000
+Hz。因此，频率低于20
+Hz的声波称为<strong>次声波（infrasound）</strong>，频率高于20,000
+Hz的声波称为<strong>超声波（ultrasound）</strong>。许多动物的听觉能力都优于人类，例如，狗的听觉范围为64—44,000
+Hz，猫的听觉范围为55—77,000 Hz，蝙蝠的听觉范围高达10,300—115,000
+Hz，海豚的听觉范围甚至可达150—150,000 Hz。<br />
+声波的频率由声源振动的频率决定。通常，长而厚的物体振动慢，短而薄的物体振动快。由于第二性征的发育，男性通常比女性声道更长、喉腔更大、声带更厚。因此，男性通常音高较低，基频为90—155
+Hz；女性通常音高较高，基频为165—255 Hz。<br />
+<strong>音高（pitch）</strong>是对频率的心理听觉感知，频率越高，音高越高。两个音高之间的距离可以用<strong>音程（interval）</strong>描述，音程定义为频率之比，频率比为2:1的两个音之间的音程为一个<strong>八度（octave）</strong>。</p>
+<p><strong>声强（sound
+intensity）</strong>是介质中垂直于传播方向上声波在单位时间内通过单位面积的能量，即单位面积所携带的功率，通常用字母<span
+class="math inline">\(I\)</span>表示，单位为瓦特每平方米（W/m²）。以<span
+class="math inline">\(E\)</span>表示能量，<span
+class="math inline">\(S\)</span>表示面积，<span
+class="math inline">\(t\)</span>表示时间，则声强定义如下：（其中声功率<span
+class="math inline">\(P = \dfrac{E}{t}\)</span>） <span
+class="math display">\[I = \dfrac{E}{S t} = \dfrac{P}{S}\]</span>
+由于声波向四周传播时通过面积逐渐增大，因此传播过程中声强逐渐减小。人类听觉一般能够感知到的最小声强<span
+class="math inline">\(I_{0} = 1\ \mathrm{pW/m^{2}} = 1 \times 10^{-12}\
+\mathrm{W/m^{2}}\)</span>。<br />
+声强与振幅正相关，声波的振幅越大，声强越大。声波的振幅由声源振动的振幅决定。声源被输入的能量越多，振动的振幅越大。<br />
+<strong>音强</strong>或<strong>响度（loudness）</strong>是对声强的心理听觉感知，振幅越大，声强越大，响度越大。由于人耳能感知到的声强范围极广，通常使用对数尺度描述音强。分贝尺度基于以10为底的对数，分贝（decibel,
+dB）是最常用的音强单位。1分贝等于1/10贝尔（bel,
+B），贝尔以发明电话的苏格兰科学家亚历山大·格雷厄姆·贝尔（Alexander
+Graham Bell，1847—1922）命名，但分贝的使用远多于贝尔，1分贝表示<span
+class="math inline">\(10^{\frac{1}{10}} \approx
+1.26\)</span>的比值。以听觉阈值1×10⁻¹² W/m²为参考值，定义为0 dB，则10
+dB为参考值的10倍1×10⁻¹¹ W/m²，20 dB为参考值的100倍1×10⁻¹⁰
+W/m²，依此类推。以声强计算的对数量称为<strong>声强级（sound intensity
+level, SIL）</strong>，通常用字母<span
+class="math inline">\(L_{I}\)</span>表示，单位全称为dB re 1 pW/m²或dB
+SIL，定义如下： <span class="math display">\[L_{I} = \lg
+\dfrac{I}{I_{0}} \mathrm{B} = 10 \lg \dfrac{I}{I_{0}}
+\mathrm{dB}\]</span> 此外，音强也与频率有关。由于人耳对1000—5000
+Hz的频率更加敏感，即使声强或声强级相同，频率在这一范围内的声音响度也会更大。</p>
+<p>声波的<strong>时长</strong>是声波的持续时间，由声源振动的绝对时间长度决定。<br />
+<strong>音长（duration）</strong>是对声波时长的心理听觉感知。人类感知到的音长往往是相对的，即声音的相对时间长度，是音段之间音长的比例或对比关系。<br />
+</p>
+<p>最简单的声波是正弦波，振幅与时间成正弦函数，这种声音称为<strong>纯音（pure
+tone）</strong>。但是，绝大多数声音都不是纯音，而是由若干频率不同的纯音叠加而成的<strong>复音（complex
+tone）</strong>。周期性复音中，各纯音为<strong>谐波（harmonic）</strong>：其中频率最低的谐波称为<strong>基波（fundamental
+wave）</strong>，其频率称为<strong>基频（fundamental
+frequency）</strong>，记作f₀；基波之外的谐波称为<strong>高次谐波（higher
+harmonic）</strong>，即<strong>泛音（overtone）</strong>。谐波的频率为基频的正整数倍，以基波为一次谐波，则二次谐波、三次谐波、四次谐波等频率依次为基频的2倍、3倍、4倍等。<br />
+将复音分解为谐波，以频率为横轴，以振幅或声强级为纵轴，就可以绘制出二维的<strong>频谱（frequency
+spectrum）</strong>。在频谱上可以直观地看出复音的音高和音强。复音的音高主要由基频决定，频谱最左侧的谱线即为基波，基频越高，音高越高。频谱曲线下方的面积与声强正相关，对频率的积分越大，音强越大。<br />
+<strong>音质（quality）</strong>或<strong>音色（timbre）</strong>是对频谱整体的心理听觉感知，不同的频谱决定了不同的音质。音质使得我们能在音高和音强相同时也能区分不同的声音，音素正是根据音质划分的语音单位，一种音素就代表一种音质。例如，下图分别是元音[a]和[i]的频谱图，两者音高、音强相近，但是频谱区别明显，这是两者听感不同的根本原因：
+<img
+src="https://files.seeusercontent.com/2026/09/26/Rj9p/a-spectrum.png"
+title="元音[a]的频谱图" alt="元音[a]的频谱图" /> <img
+src="https://files.seeusercontent.com/2026/09/26/bzF9/i-spectrum.png"
+title="元音[i]的频谱图" alt="元音[i]的频谱图" /></p>
+<p>频谱由声源本身的性质和共振结构共同决定。每个人的声音音色都不同，正是因为每个人的发音器官都略有不同，所以频谱各不相同，这是<strong>声纹（acoustic
+fingerprint）</strong>识别的基础。<br />
+所有声源都有其<strong>自然频率（natural
+frequency）</strong>，自由振动发声时其频率等于自然频率。但是，声源在受迫振动发声时频率与外力保持一致。如果受迫振动的频率与自然频率相差较大，那么振动只能维持微弱的振幅；相反，如果受迫振动的频率与自然频率相同，声源就可以从外力中输入能量，以较大的振幅振动。因此，当两个声源自然频率相同时，其中一个声源自由振动发声，另一个声源在相同频率的介质质点运动的作用下受迫振动，也会发出声音，这种现象称为<strong>共振（resonance）</strong>或<strong>共鸣</strong>。例如，在<strong>双声唱法（diphonic
+singing）</strong>中，利用声带与口腔的共振，歌手可以同时发出两个不同的音高。双声唱法起源于蒙古，呼麦（khöömii）就是这一唱法的代表。<br />
+共振是除声源本身外导致频谱不同的另一大原因。复音进入共振腔时，与共振腔自然频率相同的谐波会因共振而振幅增大，其它谐波则振幅不变或者减小，频谱由此发生改变。小提琴和大提琴之所以音色不同，不仅是因为作为声源的琴弦不同，更是因为琴身内部的共振腔不同。语音的多样性只有一小部分源于声带本身，主要原因也是共振腔（口腔、鼻腔、咽腔）和不同调音部位与方式所形成的共振结构。正是这种共振结构决定了语音的能量集中在特定频率上。</p>
+<iframe src="//player.bilibili.com/player.html?aid=14004948&amp;bvid=BV1ax411t7Hk&amp;cid=22872802&amp;p=1&amp;high_quality=1&amp;danmaku=0&amp;autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true">
+</iframe>
+<h2 id="语谱图">语谱图</h2>
+<h2 id="韵律">韵律</h2>
+<h1 id="听觉语音学">听觉语音学</h1>
+<h2 id="人耳">人耳</h2>
+<h1 id="参考书目">参考书目</h1>
+<ul>
+<li>Peter Ladefoged, Keith Johnson. <em>A Course in Phonetics</em>, 7th
+Edition. Cengage Learning
+<ul>
+<li>《语音学教程》，第七版，张维佳、田飞洋 译．北京大学出版社</li>
+</ul></li>
+<li>朱晓农．《语音学》．商务印书馆</li>
+<li>林焘、王理嘉．《语音学教程》，增订版．北京大学出版社</li>
+<li>国际语音学会．《国际语音学会手册：国际音标使用指南》，中文修订本，江荻、孟雯
+译校．上海教育出版社</li>
+<li>鲍怀翘、林茂灿．《实验语音学概要》，增订版．北京大学出版社</li>
+<li>Henning Reetz, Allard Jongman. <em>Phonetics: Transcription,
+Production, Acoustics, and Perception</em>, 2nd Edition. Wiley-Blackwell
+<ul>
+<li>《语音学：标音、产生、声学和感知》，曹梦雪、李爱军
+译．中国社会科学出版社</li>
+</ul></li>
+</ul>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="reward-container">
+  <div>请我一杯咖啡吧！</div>
+  <button>
+    赞赏
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="/images/wechatpay.png" alt="Luckyfuy 微信">
+        <span>微信</span>
+      </div>
+      <div>
+        <img src="/images/alipay.jpg" alt="Luckyfuy 支付宝">
+        <span>支付宝</span>
+      </div>
+
+  </div>
+</div>
+
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>Luckyfuy
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://luckyfuy.top/2026/08/24/Phonetics/" title="学习笔记·语音学">https://luckyfuy.top/2026/08/24/Phonetics/</a>
+  </li>
+  <li class="post-copyright-license">
+      <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a>许可协议，转载请注明出处。
+  </li>
+</ul>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/Linguistics/" rel="tag"># Linguistics</a>
+          </div>
+
+        
+  <div class="social-like a2a_kit a2a_kit_size_32 a2a_default_style">
+    <a class="a2a_dd" target="_blank" rel="noopener" href="https://www.addtoany.com/share"></a>
+      <a class="a2a_button_wechat"></a>
+      <a class="a2a_button_qzone"></a>
+      <a class="a2a_button_sina_weibo"></a>
+      <a class="a2a_button_douban"></a>
+      <a class="a2a_button_telegram"></a>
+      <a class="a2a_button_whatsapp"></a>
+      <a class="a2a_button_line"></a>
+      <a class="a2a_button_twitter"></a>
+      <a class="a2a_button_facebook"></a>
+      <a class="a2a_button_threads"></a>
+  </div>
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2026/07/23/Uzbek-Orthography/" rel="prev" title="学习笔记·乌兹别克语音系与正字法">
+                  <i class="fa fa-angle-left"></i> 学习笔记·乌兹别克语音系与正字法
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2026/09/10/Phonology/" rel="next" title="学习笔记·音系学">
+                  学习笔记·音系学 <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    
+  <div class="comments" id="disqus_thread">
+    <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
+  </div>
+  
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+  <div class="languages">
+    <label class="lang-select-label">
+      <i class="fa fa-language"></i>
+      <span>ελληνικά</span>
+      <i class="fa fa-angle-up" aria-hidden="true"></i>
+    </label>
+    <select class="lang-select" data-canonical="" aria-label="选择语言">
+      
+        <option value="zh-CN" data-href="/2026/08/24/Phonetics/" selected="">
+          汉语（简体）
+        </option>
+      
+        <option value="zh-TW" data-href="/zh-TW/2026/08/24/Phonetics/" selected="">
+          漢語（臺灣正體）
+        </option>
+      
+        <option value="en" data-href="/en/2026/08/24/Phonetics/" selected="">
+          English (United States)
+        </option>
+      
+        <option value="de" data-href="/de/2026/08/24/Phonetics/" selected="">
+          Deutsch (Deutschland)
+        </option>
+      
+        <option value="sv" data-href="/sv/2026/08/24/Phonetics/" selected="">
+          svenska
+        </option>
+      
+        <option value="es" data-href="/es/2026/08/24/Phonetics/" selected="">
+          español (España)
+        </option>
+      
+        <option value="pt" data-href="/pt/2026/08/24/Phonetics/" selected="">
+          português (Brasil)
+        </option>
+      
+        <option value="ca" data-href="/ca/2026/08/24/Phonetics/" selected="">
+          català
+        </option>
+      
+        <option value="fr" data-href="/fr/2026/08/24/Phonetics/" selected="">
+          français
+        </option>
+      
+        <option value="ru" data-href="/ru/2026/08/24/Phonetics/" selected="">
+          русский
+        </option>
+      
+        <option value="el" data-href="/el/2026/08/24/Phonetics/" selected="">
+          ελληνικά
+        </option>
+      
+        <option value="eu" data-href="/eu/2026/08/24/Phonetics/" selected="">
+          euskara
+        </option>
+      
+        <option value="ja" data-href="/ja/2026/08/24/Phonetics/" selected="">
+          日本語
+        </option>
+      
+        <option value="ko" data-href="/ko/2026/08/24/Phonetics/" selected="">
+          한국어
+        </option>
+      
+        <option value="vi" data-href="/vi/2026/08/24/Phonetics/" selected="">
+          tiếng Việt
+        </option>
+      
+        <option value="ms" data-href="/ms/2026/08/24/Phonetics/" selected="">
+          Bahasa Melayu
+        </option>
+      
+        <option value="uz" data-href="/uz/2026/08/24/Phonetics/" selected="">
+          özbekça
+        </option>
+      
+        <option value="la" data-href="/la/2026/08/24/Phonetics/" selected="">
+          Latina
+        </option>
+      
+    </select>
+  </div>
+
+  <div class="copyright">
+    &copy; 2018 – 
+    <span itemprop="copyrightYear">2026</span>
+    <span class="with-love">
+      <i class="fa fa-battery-full"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">Luckyfuy</span>
+  </div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+      <span>站点总字数：</span>
+    <span title="站点总字数">466k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span>站点阅读时长 &asymp;</span>
+    <span title="站点阅读时长">28:14</span>
+  </span>
+</div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+  <div class="powered-by">由<a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a>强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+  <a href="https://github.com/Luckyfuy/luckyfuy.github.io" class="github-corner" title="在GitHub上关注我" aria-label="在GitHub上关注我" rel="noopener" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+<script class="next-config" data-name="disqus" type="application/json">{"enable":true,"shortname":"luckyfuy-blog","count":true,"i18n":{"disqus":"disqus"}}</script>
+<script src="/js/third-party/comments/disqus.js" defer></script>
+
+</body>
+</html>
