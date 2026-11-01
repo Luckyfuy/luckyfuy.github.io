@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width">
-<meta name="theme-color" content="#9370db"><meta name="generator" content="Hexo 8.1.1">
+<meta name="theme-color" content="#9370db"><meta name="generator" content="Hexo 8.1.2">
+  <link rel="preload" href="/css/main.css" as="style">
 <link rel="preconnect" href="https://fonts.googleapis.cn" crossorigin>
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
@@ -17,12 +18,12 @@
 
 <link rel="stylesheet" href="https://fonts.googleapis.cn/css2?family=Fira+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Noto+Serif+SC:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Fira+Code:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap&subset=latin,latin-ext">
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.0.0/css/all.min.css" integrity="sha256-VHqXKFhhMxcpubYf9xiWdCiojEbY9NexQ4jh8AxbvcM=" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.3.1/css/all.min.css" integrity="sha256-4Lad8m4ZWW1Lgb9+sMVLYEfnIh7BjV1NQMEe79Pviks=" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/themes/purple/pace-theme-minimal.css">
   <script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous" defer></script>
 
-<script class="next-config" data-name="main" type="application/json">{"hostname":"luckyfuy.top","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.29.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"base16/one-light","dark":"base16/onedark"},"prism":{"light":"prism","dark":"prism-dark"},"copy_button":{"enable":true,"style":"flat"},"fold":{"enable":false,"height":500},"language":false},"bookmark":{"enable":false,"color":"#222","save":"manual"},"mediumzoom":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜尋","empty":"我們無法找到任何有關${query}的搜索結果","hits_time":"找到${hits}個搜索結果（用時${time}毫秒）","hits":"找到${hits}個搜索結果"},"path":"/search.xml","localsearch":{"enable":true,"top_n_per_article":1,"unescape":true,"preload":true}}</script><script src="/js/config.js" defer></script>
+<script class="next-config" data-name="main" type="application/json">{"hostname":"luckyfuy.top","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.29.1","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"base16/one-light","dark":"base16/onedark"},"prism":{"light":"prism","dark":"prism-dark"},"copy_button":{"enable":true,"style":"flat"},"fold":{"enable":false,"height":500},"language":false},"bookmark":{"enable":false,"color":"#222","save":"manual"},"mediumzoom":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜尋","empty":"我們無法找到任何有關${query}的搜索結果","hits_time":"找到${hits}個搜索結果（用時${time}毫秒）","hits":"找到${hits}個搜索結果"},"path":"/search.xml","localsearch":{"enable":true,"top_n_per_article":1,"unescape":true,"preload":true}}</script><script src="/js/config.js" defer></script>
 
     <meta name="description" content="这好像是全博客第一篇与文化课有点关系的…… （rgq：真好玩）">
 <meta property="og:type" content="article">
@@ -111,12 +112,8 @@
   <main class="main">
     <div class="column">
       <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
-  <div class="site-nav-toggle">
-    <div class="toggle" aria-label="切換導航欄" role="button">
-        <span class="toggle-line"></span>
-        <span class="toggle-line"></span>
-        <span class="toggle-line"></span>
-    </div>
+  <div class="site-nav-search popup-trigger" aria-label="搜尋" role="button">
+      <i class="fa fa-search fa-fw fa-lg"></i>
   </div>
 
   <div class="site-meta">
@@ -128,10 +125,8 @@
     </a>
   </div>
 
-  <div class="site-nav-right">
-    <div class="toggle popup-trigger" aria-label="搜尋" role="button">
-        <i class="fa fa-search fa-fw fa-lg"></i>
-    </div>
+  <div class="site-nav-toggle" aria-label="切換導航欄" role="button">
+      <i class="fa fa-ellipsis fa-fw fa-lg"></i>
   </div>
 </div>
 
@@ -148,7 +143,8 @@
 
 
 
-  <div class="search-pop-overlay">
+  
+  <template id="search-popup-template"><div class="search-pop-overlay">
     <div class="popup search-popup">
       <div class="search-header">
         <span class="search-icon">
@@ -169,7 +165,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </div></template>
 
 </header>
         
@@ -325,7 +321,7 @@
     <span class="post-meta-break"></span>
     <span class="post-meta-item" title="文章字數">
       <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
+        <i class="far fa-file-lines"></i>
       </span>
       <span class="post-meta-item-text">文章字數：</span>
       <span>1.3k</span>
@@ -810,7 +806,6 @@ c} \quad \Box
     <span class="toggle-line"></span>
     <span class="toggle-line"></span>
   </div>
-  <div class="sidebar-dimmer"></div>
   <div class="back-to-top" role="button" aria-label="回到頂端">
     <i class="fa fa-arrow-up fa-lg"></i>
     <span>0%</span>

@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width">
-<meta name="theme-color" content="#9370db"><meta name="generator" content="Hexo 8.1.1">
+<meta name="theme-color" content="#9370db"><meta name="generator" content="Hexo 8.1.2">
+  <link rel="preload" href="/css/main.css" as="style">
 <link rel="preconnect" href="https://fonts.googleapis.cn" crossorigin>
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
@@ -17,12 +18,12 @@
 
 <link rel="stylesheet" href="https://fonts.googleapis.cn/css2?family=Fira+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Noto+Serif+SC:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Fira+Code:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap&subset=latin,latin-ext">
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.0.0/css/all.min.css" integrity="sha256-VHqXKFhhMxcpubYf9xiWdCiojEbY9NexQ4jh8AxbvcM=" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.3.1/css/all.min.css" integrity="sha256-4Lad8m4ZWW1Lgb9+sMVLYEfnIh7BjV1NQMEe79Pviks=" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/themes/purple/pace-theme-minimal.css">
   <script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous" defer></script>
 
-<script class="next-config" data-name="main" type="application/json">{"hostname":"luckyfuy.top","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.29.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"base16/one-light","dark":"base16/onedark"},"prism":{"light":"prism","dark":"prism-dark"},"copy_button":{"enable":true,"style":"flat"},"fold":{"enable":false,"height":500},"language":false},"bookmark":{"enable":false,"color":"#222","save":"manual"},"mediumzoom":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"Поиск...","empty":"По запросу ничего не найдено: ${query}","hits_time":"${hits} результатов найдено за ${time} мс","hits":"${hits} результатов найдено"},"path":"/search.xml","localsearch":{"enable":true,"top_n_per_article":1,"unescape":true,"preload":true}}</script><script src="/js/config.js" defer></script>
+<script class="next-config" data-name="main" type="application/json">{"hostname":"luckyfuy.top","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.29.1","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"base16/one-light","dark":"base16/onedark"},"prism":{"light":"prism","dark":"prism-dark"},"copy_button":{"enable":true,"style":"flat"},"fold":{"enable":false,"height":500},"language":false},"bookmark":{"enable":false,"color":"#222","save":"manual"},"mediumzoom":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"Поиск...","empty":"По запросу ничего не найдено: ${query}","hits_time":"${hits} результатов найдено за ${time} мс","hits":"${hits} результатов найдено"},"path":"/search.xml","localsearch":{"enable":true,"top_n_per_article":1,"unescape":true,"preload":true}}</script><script src="/js/config.js" defer></script>
 
     <meta name="description" content="语音学（phonetics）是研究语音的自然属性的科学，包括其产生、传输、解码的过程。因此，语音学一般分为三个分支：发音语音学、声学语音学、听觉语音学。 语音学和音系学是两个相互独立而又密不可分的学科。语音学关注语音的自然属性，即语音自身所反映的生理、物理、心理属性；音系学则关注语音的社会属性，即语音在语言系统中的组织形式。">
 <meta property="og:type" content="article">
@@ -112,12 +113,8 @@
   <main class="main">
     <div class="column">
       <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
-  <div class="site-nav-toggle">
-    <div class="toggle" aria-label="Показать/скрыть меню" role="button">
-        <span class="toggle-line"></span>
-        <span class="toggle-line"></span>
-        <span class="toggle-line"></span>
-    </div>
+  <div class="site-nav-search popup-trigger" aria-label="Искать" role="button">
+      <i class="fa fa-search fa-fw fa-lg"></i>
   </div>
 
   <div class="site-meta">
@@ -129,10 +126,8 @@
     </a>
   </div>
 
-  <div class="site-nav-right">
-    <div class="toggle popup-trigger" aria-label="Искать" role="button">
-        <i class="fa fa-search fa-fw fa-lg"></i>
-    </div>
+  <div class="site-nav-toggle" aria-label="Показать/скрыть меню" role="button">
+      <i class="fa fa-ellipsis fa-fw fa-lg"></i>
   </div>
 </div>
 
@@ -149,7 +144,8 @@
 
 
 
-  <div class="search-pop-overlay">
+  
+  <template id="search-popup-template"><div class="search-pop-overlay">
     <div class="popup search-popup">
       <div class="search-header">
         <span class="search-icon">
@@ -170,7 +166,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </div></template>
 
 </header>
         
@@ -326,7 +322,7 @@
     <span class="post-meta-break"></span>
     <span class="post-meta-item" title="Кол-во символов в статье">
       <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
+        <i class="far fa-file-lines"></i>
       </span>
       <span class="post-meta-item-text">Кол-во символов в статье: </span>
       <span>19k</span>
@@ -1438,7 +1434,6 @@ Production, Acoustics, and Perception</em>, 2nd Edition. Wiley-Blackwell
     <span class="toggle-line"></span>
     <span class="toggle-line"></span>
   </div>
-  <div class="sidebar-dimmer"></div>
   <div class="back-to-top" role="button" aria-label="В начало">
     <i class="fa fa-arrow-up fa-lg"></i>
     <span>0%</span>
