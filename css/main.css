@@ -1330,7 +1330,7 @@ pre code {
     vertical-align: middle;
   }
   .links-of-author a::before {
-    background: #32b517;
+    background: #34e7ff;
     display: inline-block;
     margin-right: 3px;
     transform: translateY(-2px);
@@ -2960,6 +2960,9 @@ header.header {
 }
 .jp {
   font-family: Noto Serif JP, Fira Sans, Noto Serif SC, 'PingFang SC', 'Microsoft YaHei', sans-serif;
+}
+.ipa {
+  font-family: Charis SIL, Fira Sans, Noto Serif SC, 'PingFang SC', 'Microsoft YaHei', sans-serif;
 }
 .links-of-author-item {
   text-align: left;
